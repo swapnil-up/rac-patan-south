@@ -1,0 +1,53 @@
+{
+  "siteName": "RAC Patan South",
+  "tagline": "Service Above Self — Rotary's Gift to Youth",
+  "contactEmail": "racpatansouth@gmail.com",
+  "contactPhone": "+123-456-7890",
+  "address": "Your City, Country",
+  "navLinks": [
+    {
+      "label": "About",
+      "url": "#about"
+    },
+    {
+      "label": "Services",
+      "url": "#services"
+    },
+    {
+      "label": "Contact",
+      "url": "#contact"
+    }
+  ],
+  "socialLinks": [
+    {
+      "label": "Facebook",
+      "url": "#"
+    },
+    {
+      "label": "Twitter",
+      "url": "#"
+    }
+  ],
+  "formEndpoint": "",
+  "footerText": "© 2026 RAC Patan South. All rights reserved.",
+  "brand": {
+    "logo": "",
+    "favicon": "",
+    "colors": {
+      "primary": "#1a4a5a",
+      "primaryDark": "#0e2e38",
+      "primaryLight": "#3a8a8a",
+      "accent": "#c4735e",
+      "accentLight": "#f0ded6",
+      "accentHover": "#b05d48",
+      "gold": "#c4954a",
+      "goldLight": "#f0e3c8",
+      "goldHover": "#d4a85a",
+      "green": "#3d7a5a",
+      "greenLight": "#d4e8dc",
+      "footerBg": "#2c241e",
+      "heroBgStart": "#081e26",
+      "bodyBg": "#faf8f5"
+    }
+  }
+}

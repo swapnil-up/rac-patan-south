@@ -1,0 +1,38 @@
+{
+  "name": "cms-demo",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tinacms dev -c \"vite\"",
+    "build": "tinacms build && vite build",
+    "build-local": "tinacms build --local --skip-cloud-checks -c \"vite build\"",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "tinacms": "^3.9.3",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@tinacms/cli": "^2.5.1",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "vite": "^8.1.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "19",
+        "react-dom": "19",
+        "typescript": ">=5.7",
+        "fs-extra": "11"
+      }
+    }
+  }
+}
