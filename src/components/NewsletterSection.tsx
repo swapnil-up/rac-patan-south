@@ -37,7 +37,7 @@ export default function NewsletterSection({
   }
 
   return (
-    <section id="newsletter" className="section section-alt">
+    <section id={section.id || "newsletter"} className="section section-alt">
       <div className="container">
         <div className={styles.inner}>
           <div className="section-header">

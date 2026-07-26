@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import client from "../../tina/__generated__/client";
 import type { Blog } from "../../tina/__generated__/types";
-import { useSettings } from "../hooks/useSettings";
+import { useSettingsContext } from "../hooks/SettingsContext";
 import ThemeStyle from "../components/ThemeStyle";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -12,7 +12,7 @@ import styles from "./BlogListPage.module.css";
 const PAGE_SIZE = 9;
 
 export default function BlogListPage() {
-  const { settings } = useSettings();
+  const { settings } = useSettingsContext();
   const [posts, setPosts] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
   const [cursor, setCursor] = useState<string | null>(null);

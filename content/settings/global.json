@@ -10,8 +10,7 @@
     { "label": "Events", "url": "/events" },
     { "label": "Gallery", "url": "/gallery" },
     { "label": "Join", "url": "/join" },
-    { "label": "Resources", "url": "/resources" },
-    { "label": "Testimonials", "url": "/testimonials" }
+    { "label": "Resources", "url": "/resources" }
   ],
   "socialLinks": [
     {

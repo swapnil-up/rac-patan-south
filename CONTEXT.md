@@ -39,12 +39,11 @@ Content lives in `content/` as markdown files. TinaCMS auto-generates types and 
 | Testimonial | `content/testimonial/` | Quotes from beneficiaries/partners |
 | Settings | `content/settings/` | Global site config, brand colors, nav |
 
-### Planned collections (to be built)
-- Blog Posts — `content/blog/`
-- Events — `content/events/`
-- Gallery Albums — `content/gallery/`
-- Sponsors/Partners — `content/sponsors/`
-- Resources — `content/resources/`
+| Blog | `content/blog/` | Blog posts |
+| Event | `content/events/` | Events |
+| Gallery | `content/gallery/` | Photo albums |
+| Sponsor | `content/sponsors/` | Sponsors/partners |
+| Resource | `content/resources/` | Downloads and documents |
 
 ### Brand theming
 All brand colors are in `content/settings/global.json → brand.colors` and injected as CSS custom properties. Every component uses `var(--*)` — no hardcoded brand colors in components. Structural tokens (`--white`, `--card-bg`, `--shadow-*`, `--radius-*`, `--font-*`) have defaults in `:root` in `styles.css`.
@@ -55,13 +54,16 @@ Color fields: `primary`, `primaryDark`, `primaryLight`, `accent`, `accentLight`,
 React Router with `BrowserRouter`. Routes resolve to page slugs in TinaCMS (`/services` → loads `content/page/services.mdx`). Hash links (`/#contact`) scroll to section anchors within a page.
 
 | Route | Content |
-|---|---|
+|---|---|---|
 | `/` | Home page |
-| `/about` | About page |
-| `/services` | Programs/Services page |
-| `/team` | Team page |
-| `/testimonials` | Testimonials page |
-| `/contact` | Contact page |
+| `/join` | Join page |
+| `/blog` | Blog list |
+| `/blog/:slug` | Blog post |
+| `/events` | Events list |
+| `/events/:slug` | Event detail |
+| `/gallery` | Gallery grid |
+| `/gallery/:album` | Album detail |
+| `/resources` | Resources |
 | `/*` | 404 page |
 
 ## For agents

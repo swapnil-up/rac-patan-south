@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import client from "../../tina/__generated__/client";
 import type { Gallery } from "../../tina/__generated__/types";
-import { useSettings } from "../hooks/useSettings";
+import { useSettingsContext } from "../hooks/SettingsContext";
 import ThemeStyle from "../components/ThemeStyle";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -10,7 +10,7 @@ import SectionShell from "../components/SectionShell";
 import styles from "./GalleryGridPage.module.css";
 
 export default function GalleryGridPage() {
-  const { settings } = useSettings();
+  const { settings } = useSettingsContext();
   const [albums, setAlbums] = useState<Gallery[]>([]);
   const [loading, setLoading] = useState(true);
 

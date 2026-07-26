@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import client from "../../tina/__generated__/client";
 import type { Event } from "../../tina/__generated__/types";
-import { useSettings } from "../hooks/useSettings";
+import { useSettingsContext } from "../hooks/SettingsContext";
 import ThemeStyle from "../components/ThemeStyle";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -22,7 +22,7 @@ function isUpcoming(event: Event) {
 }
 
 export default function EventsListPage() {
-  const { settings } = useSettings();
+  const { settings } = useSettingsContext();
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
 

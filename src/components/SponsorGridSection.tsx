@@ -1,16 +1,9 @@
 import { useState, useEffect } from "react";
 import { tinaField } from "tinacms/dist/react";
-import type { PageSectionsSponsorGrid } from "../../tina/__generated__/types";
+import type { PageSectionsSponsorGrid, Sponsor } from "../../tina/__generated__/types";
 import client from "../../tina/__generated__/client";
 import SectionShell from "./SectionShell";
 import styles from "./SponsorGridSection.module.css";
-
-type Sponsor = {
-  name: string;
-  logo?: string | null;
-  url?: string | null;
-  tier?: string | null;
-};
 
 const TIER_ORDER = ["platinum", "gold", "silver", "bronze"];
 
@@ -48,7 +41,7 @@ export default function SponsorGridSection({ section }: { section: PageSectionsS
 
   return (
     <SectionShell
-      id="sponsors"
+      id={section.id || "sponsors"}
       title={section.title}
       subtitle={section.subtitle}
       titleField={tinaField(section, "title")}

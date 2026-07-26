@@ -6,6 +6,12 @@ export default {
   fields: [
     {
       type: "string",
+      name: "id",
+      label: "Anchor ID",
+      description: "Optional ID for linking to this section (e.g., 'why-join')",
+    },
+    {
+      type: "string",
       name: "title",
       label: "Title",
       isTitle: true,

@@ -7,7 +7,7 @@ export default function ServicesSection({ section }: { section: PageSectionsServ
   const services = (section.services || []).filter((s): s is PageSectionsServicesServices => s != null);
   return (
     <SectionShell
-      id="services"
+      id={section.id || "services"}
       alt
       title={section.title}
       subtitle={section.subtitle}

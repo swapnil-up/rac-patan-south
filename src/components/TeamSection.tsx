@@ -10,7 +10,7 @@ export default function TeamSection({ section }: { section: PageSectionsTeam }) 
 
   return (
     <SectionShell
-      id="team"
+      id={section.id || "team"}
       title={section.title}
       subtitle={section.subtitle}
       titleField={tinaField(section, "title")}

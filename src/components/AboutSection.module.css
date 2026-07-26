@@ -10,6 +10,10 @@
   margin: 0 auto;
 }
 
+.gridSingle :global(.section-title) {
+  text-align: center;
+}
+
 .grid .text :global(.section-title) {
   text-align: left;
 }

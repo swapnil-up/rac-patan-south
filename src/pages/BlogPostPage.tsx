@@ -3,42 +3,34 @@ import { Link } from "react-router-dom";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import client from "../../tina/__generated__/client";
 import type { Blog } from "../../tina/__generated__/types";
-import { useSettings } from "../hooks/useSettings";
+import { useSettingsContext } from "../hooks/SettingsContext";
 import ThemeStyle from "../components/ThemeStyle";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./BlogPostPage.module.css";
 
 export default function BlogPostPage({ slug }: { slug: string }) {
-  const { settings } = useSettings();
+  const { settings } = useSettingsContext();
   const [post, setPost] = useState<Blog | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    async function load(retries = 15): Promise<void> {
-      for (let attempt = 0; attempt < retries; attempt++) {
-        try {
-          const res = await client.queries.blogConnection({
-            filter: { slug: { eq: slug } },
-          });
-          const node = res.data.blogConnection.edges?.[0]?.node;
-          if (cancelled) return;
-          if (node) {
-            setPost(node as Blog);
-          } else {
-            setNotFound(true);
-          }
-          setLoading(false);
-          return;
-        } catch {
-          if (attempt < retries - 1) {
-            await new Promise((r) => setTimeout(r, 1000));
-          } else {
-            setNotFound(true);
-          }
+    async function load(): Promise<void> {
+      try {
+        const res = await client.queries.blogConnection({
+          filter: { slug: { eq: slug } },
+        });
+        const node = res.data.blogConnection.edges?.[0]?.node;
+        if (cancelled) return;
+        if (node) {
+          setPost(node as Blog);
+        } else {
+          setNotFound(true);
         }
+      } catch {
+        setNotFound(true);
       }
       setLoading(false);
     }

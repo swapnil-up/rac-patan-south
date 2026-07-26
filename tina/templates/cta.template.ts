@@ -6,6 +6,12 @@ export default {
   fields: [
     {
       type: "string",
+      name: "id",
+      label: "Anchor ID",
+      description: "Optional ID for linking to this section",
+    },
+    {
+      type: "string",
       name: "text",
       label: "Text",
     },

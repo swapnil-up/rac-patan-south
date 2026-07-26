@@ -21,7 +21,7 @@ export default function ContactSection({
 
   return (
     <SectionShell
-      id="contact"
+      id={section.id || "contact"}
       title={section.title}
       subtitle={section.subtitle}
       titleField={tinaField(section, "title")}

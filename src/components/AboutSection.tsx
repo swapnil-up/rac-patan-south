@@ -5,7 +5,7 @@ import styles from "./AboutSection.module.css";
 
 export default function AboutSection({ section }: { section: PageSectionsAbout }) {
   return (
-    <section id="about" className="section">
+        <section id={section.id || "about"} className="section">
       <div className="container">
         <div className={section.image ? styles.grid : styles.gridSingle}>
           <div className={styles.text}>

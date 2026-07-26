@@ -10,7 +10,7 @@ export default function TestimonialsSection({ section }: { section: PageSections
 
   return (
     <SectionShell
-      id="testimonials"
+      id={section.id || "testimonials"}
       alt
       title={section.title}
       subtitle={section.subtitle}

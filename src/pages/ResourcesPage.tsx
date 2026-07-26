@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import client from "../../tina/__generated__/client";
 import type { Resource } from "../../tina/__generated__/types";
-import { useSettings } from "../hooks/useSettings";
+import { useSettingsContext } from "../hooks/SettingsContext";
 import ThemeStyle from "../components/ThemeStyle";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -9,7 +9,7 @@ import SectionShell from "../components/SectionShell";
 import styles from "./ResourcesPage.module.css";
 
 export default function ResourcesPage() {
-  const { settings } = useSettings();
+  const { settings } = useSettingsContext();
   const [resources, setResources] = useState<Resource[]>([]);
   const [loading, setLoading] = useState(true);
 

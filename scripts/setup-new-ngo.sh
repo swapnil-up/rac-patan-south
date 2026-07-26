@@ -14,12 +14,6 @@ YEAR=$(date +%Y)
 # Ensure target directories exist
 mkdir -p content/page content/settings content/team content/testimonial
 
-# Copy template content
-cp -r tenants/_template/content/page/* content/page/
-cp -r tenants/_template/content/settings/* content/settings/
-cp -r tenants/_template/content/team/* content/team/
-cp -r tenants/_template/content/testimonial/* content/testimonial/
-
 # Update settings with NGO info
 TMP=$(mktemp)
 if command -v jq &>/dev/null; then
