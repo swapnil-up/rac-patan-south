@@ -12,21 +12,22 @@
   --text-muted: #6b7280;
   --text-light: #9ca3af;
   --border: #e5e7eb;
-  --primary: #1a4a5a;
-  --primary-dark: #0e2e38;
-  --primary-light: #3a8a8a;
-  --accent: #c4735e;
-  --accent-light: #f0ded6;
-  --accent-hover: #b05d48;
-  --gold: #c4954a;
-  --gold-light: #f0e3c8;
-  --gold-hover: #d4a85a;
-  --green: #3d7a5a;
-  --green-light: #d4e8dc;
-  --footer-bg: #2c241e;
-  --hero-bg-start: #081e26;
+  --primary: #d41367;
+  --primary-dark: #b00053;
+  --primary-dark-rgb: 176, 0, 83;
+  --primary-light: #fbe1ee;
+  --accent: #e02927;
+  --accent-light: #fceaea;
+  --accent-hover: #c2201f;
+  --gold: #f7a81b;
+  --gold-light: #fef0d5;
+  --gold-hover: #e09000;
+  --green: #009739;
+  --green-light: #d4f0d9;
+  --footer-bg: #657f99;
+  --hero-bg-start: #4a0d28;
   --body-bg: #faf8f5;
-  --card-bg: #f8f7f5;
+  --card-bg: #ffffff;
   --input-bg: #f8f7f5;
   --error-bg: #f5d6ce;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -36,8 +37,8 @@
   --radius-lg: 16px;
   --max-width: 1140px;
   --nav-height: 68px;
-  --font-display: "Sora", system-ui, sans-serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Open Sans", "Arial", system-ui, sans-serif;
+  --font-body: "Georgia", "Times New Roman", serif;
 }
 
 html {
@@ -52,9 +53,9 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   background-image:
-    radial-gradient(circle at 0% 10%, rgba(var(--primary-rgb, 26, 74, 90), 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 100% 30%, rgba(var(--accent-rgb, 196, 115, 94), 0.04) 0%, transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(var(--primary-light-rgb, 58, 138, 138), 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 0% 10%, rgba(var(--primary-rgb, 212, 19, 103), 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 100% 30%, rgba(var(--accent-rgb, 224, 41, 39), 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(var(--primary-light-rgb, 251, 225, 238), 0.03) 0%, transparent 50%);
 }
 
 img {
@@ -165,13 +166,13 @@ a {
 .btn-primary {
   background: var(--accent);
   color: var(--white);
-  box-shadow: 0 2px 8px rgba(var(--accent-rgb, 196, 115, 94), 0.25);
+  box-shadow: 0 2px 8px rgba(var(--accent-rgb, 224, 41, 39), 0.25);
 }
 
 .btn-primary:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(var(--accent-rgb, 196, 115, 94), 0.3);
+  box-shadow: 0 4px 16px rgba(var(--accent-rgb, 224, 41, 39), 0.3);
 }
 
 .btn-primary:disabled {
@@ -184,14 +185,14 @@ a {
 .btn-accent {
   background: var(--gold);
   color: var(--primary-dark);
-  box-shadow: 0 2px 8px rgba(var(--gold-rgb, 196, 149, 74), 0.25);
+  box-shadow: 0 2px 8px rgba(var(--gold-rgb, 247, 168, 27), 0.25);
   font-weight: 700;
 }
 
 .btn-accent:hover {
   background: var(--gold-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(var(--gold-rgb, 196, 149, 74), 0.3);
+  box-shadow: 0 4px 16px rgba(var(--gold-rgb, 247, 168, 27), 0.3);
 }
 
 .loading-screen {

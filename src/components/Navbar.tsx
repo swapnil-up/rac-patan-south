@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { tinaField } from "tinacms/dist/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import type { SettingsPartsFragment } from "../../tina/__generated__/types";
 import styles from "./Navbar.module.css";
 
 export default function Navbar({ settings }: { settings: SettingsPartsFragment }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
   const navLinks = settings?.navLinks || [];
 
   function closeMobile() {
@@ -46,6 +47,7 @@ export default function Navbar({ settings }: { settings: SettingsPartsFragment }
               to={link?.url || "#"}
               data-tina-field={tinaField(settings, "navLinks", i)}
               onClick={closeMobile}
+              aria-current={location.pathname === link?.url ? "page" : undefined}
             >
               {link?.label}
             </Link>

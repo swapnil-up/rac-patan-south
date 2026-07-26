@@ -1,0 +1,76 @@
+.loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem 0;
+}
+
+.tierGroup {
+  margin-bottom: 2.5rem;
+}
+
+.tierGroup:last-child {
+  margin-bottom: 0;
+}
+
+.tierLabel {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.platinum .sponsor {
+  flex-basis: 220px;
+}
+
+.gold .sponsor {
+  flex-basis: 180px;
+}
+
+.silver .sponsor {
+  flex-basis: 150px;
+}
+
+.bronze .sponsor {
+  flex-basis: 120px;
+}
+
+.sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  opacity: 0.7;
+}
+
+.sponsor:hover {
+  opacity: 1;
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}

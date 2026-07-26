@@ -125,16 +125,18 @@ export default function ContactSection({
               >
                 {status === "loading" ? "Sending..." : "Send Message"}
               </button>
-              {status === "success" && (
-                <p className={styles.feedback + " " + styles.success}>
-                  Message sent successfully!
-                </p>
-              )}
-              {status === "error" && (
-                <p className={styles.feedback + " " + styles.error}>
-                  {settings?.formEndpoint ? "Failed to send. Please try again." : "Form endpoint not configured in site settings."}
-                </p>
-              )}
+              <div role="alert">
+                {status === "success" && (
+                  <p className={styles.feedback + " " + styles.success}>
+                    Message sent successfully!
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className={styles.feedback + " " + styles.error}>
+                    {settings?.formEndpoint ? "Failed to send. Please try again." : "Form endpoint not configured in site settings."}
+                  </p>
+                )}
+              </div>
             </form>
         </div>
     </SectionShell>

@@ -6,6 +6,7 @@ export default function SectionShell({
   titleField,
   subtitleField,
   children,
+  visible,
 }: {
   id: string;
   alt?: boolean;
@@ -14,9 +15,11 @@ export default function SectionShell({
   titleField?: string;
   subtitleField?: string;
   children: React.ReactNode;
+  visible?: boolean;
 }) {
+  const cls = `section${alt ? " section-alt" : ""}${visible ? " is-visible" : ""}`;
   return (
-    <section id={id} className={`section${alt ? " section-alt" : ""}`}>
+    <section id={id} className={cls}>
       <div className="container">
         <div className="section-header">
           <h2 className="section-title" data-tina-field={titleField}>{title}</h2>

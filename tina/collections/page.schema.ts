@@ -7,6 +7,8 @@ import teamTemplate from "../templates/team.template";
 import testimonialsTemplate from "../templates/testimonials.template";
 import contactTemplate from "../templates/contact.template";
 import ctaTemplate from "../templates/cta.template";
+import newsletterTemplate from "../templates/newsletter.template";
+import sponsorGridTemplate from "../templates/sponsor-grid.template";
 
 export default {
   label: "Pages",
@@ -28,6 +30,8 @@ export default {
         testimonialsTemplate,
         contactTemplate,
         ctaTemplate,
+        newsletterTemplate,
+        sponsorGridTemplate,
       ],
     },
   ],

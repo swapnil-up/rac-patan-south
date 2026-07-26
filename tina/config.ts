@@ -4,6 +4,11 @@ import settingsCollection from "./collections/settings.schema";
 import pageCollection from "./collections/page.schema";
 import teamCollection from "./collections/team.schema";
 import testimonialCollection from "./collections/testimonial.schema";
+import blogCollection from "./collections/blog.schema";
+import eventCollection from "./collections/event.schema";
+import galleryCollection from "./collections/gallery.schema";
+import sponsorCollection from "./collections/sponsor.schema";
+import resourceCollection from "./collections/resource.schema";
 
 export default defineConfig({
   telemetry: "disabled",
@@ -31,6 +36,11 @@ export default defineConfig({
       pageCollection,
       teamCollection,
       testimonialCollection,
+      blogCollection,
+      eventCollection,
+      galleryCollection,
+      sponsorCollection,
+      resourceCollection,
     ],
   },
 });

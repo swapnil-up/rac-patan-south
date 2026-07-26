@@ -23,7 +23,17 @@ import TeamSection from "./components/TeamSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import CTASection from "./components/CTASection";
+import NewsletterSection from "./components/NewsletterSection";
+import SponsorGridSection from "./components/SponsorGridSection";
 import Footer from "./components/Footer";
+
+import BlogListPage from "./pages/BlogListPage";
+import BlogPostPage from "./pages/BlogPostPage";
+import EventsListPage from "./pages/EventsListPage";
+import EventDetailPage from "./pages/EventDetailPage";
+import GalleryGridPage from "./pages/GalleryGridPage";
+import AlbumDetailPage from "./pages/AlbumDetailPage";
+import ResourcesPage from "./pages/ResourcesPage";
 
 import "./styles.css";
 
@@ -31,6 +41,11 @@ function getPageSlug(pathname: string): string {
   const p = pathname.replace(/\/+$/, "") || "/";
   const segments = p.split("/").filter(Boolean);
   return segments.length === 0 ? "home" : segments[0] || "home";
+}
+
+function getContentSlug(pathname: string): string | null {
+  const segments = pathname.replace(/\/+$/, "").split("/").filter(Boolean);
+  return segments.length >= 2 ? segments[1] : null;
 }
 
 function SectionRenderer({
@@ -55,6 +70,10 @@ function SectionRenderer({
       return <ContactSection section={section} settings={settings} />;
     case "PageSectionsCta":
       return <CTASection section={section} />;
+    case "PageSectionsNewsletter":
+      return <NewsletterSection section={section} settings={settings} />;
+    case "PageSectionsSponsorGrid":
+      return <SponsorGridSection section={section} />;
     default:
       return null;
   }
@@ -154,6 +173,8 @@ function LoadedApp({
 export default function App() {
   const location = useLocation();
   const slug = getPageSlug(location.pathname);
+  const contentSlug = getContentSlug(location.pathname);
+
   const pageState = usePageData(slug);
   useHashScroll(pageState.status === "loaded");
 
@@ -162,6 +183,28 @@ export default function App() {
       setMeta(pageState.settingsRes.data.settings);
     }
   }, [pageState]);
+
+  if (slug === "blog" && contentSlug) {
+    return <BlogPostPage slug={contentSlug} />;
+  }
+  if (slug === "events" && contentSlug) {
+    return <EventDetailPage slug={contentSlug} />;
+  }
+  if (slug === "gallery" && contentSlug) {
+    return <AlbumDetailPage album={contentSlug} />;
+  }
+  if (slug === "blog") {
+    return <BlogListPage />;
+  }
+  if (slug === "events") {
+    return <EventsListPage />;
+  }
+  if (slug === "gallery") {
+    return <GalleryGridPage />;
+  }
+  if (slug === "resources") {
+    return <ResourcesPage />;
+  }
 
   if (pageState.status === "error") {
     return (

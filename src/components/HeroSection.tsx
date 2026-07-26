@@ -5,7 +5,7 @@ import styles from "./HeroSection.module.css";
 
 export default function HeroSection({ section }: { section: PageSectionsHero }) {
   const bgImage = section.backgroundImage
-    ? `linear-gradient(160deg, rgba(var(--primary-dark-rgb, 14, 46, 56), 0.75) 0%, rgba(var(--accent-rgb, 196, 115, 94), 0.5) 40%, rgba(var(--accent-rgb, 196, 115, 94), 0.35) 70%, rgba(var(--gold-rgb, 196, 149, 74), 0.25) 100%), url(${section.backgroundImage})`
+    ? `linear-gradient(160deg, rgba(var(--primary-dark-rgb, 176, 0, 83), 0.75) 0%, rgba(var(--accent-rgb, 224, 41, 39), 0.5) 40%, rgba(var(--accent-rgb, 224, 41, 39), 0.35) 70%, rgba(var(--gold-rgb, 247, 168, 27), 0.25) 100%), url(${section.backgroundImage})`
     : undefined;
 
   return (
