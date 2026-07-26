@@ -31,7 +31,7 @@ pnpm dev
 ### What to Change Per NGO
 
 1. **`content/settings/global.json`** — NGO name, tagline, contact info, nav links, brand colors
-2. **`content/page/home.mdx`** — Page sections (hero, about, services, team, etc.)
+2. **`content/page/*.mdx`** — One page per route (`/`, `/about`, `/services`, `/team`, `/testimonials`, `/contact`, `/*` fallback to 404). Each page has its own sections.
 3. **`content/team/*.md`** — Add/remove team member profiles
 4. **`content/testimonial/*.md`** — Add/remove testimonials
 5. **`public/uploads/`** — Upload images, then reference them in content via `/uploads/filename.jpg`
@@ -52,6 +52,20 @@ pnpm dev
 - App: [http://localhost:5173](http://localhost:5173)
 - Tina Admin: [http://localhost:5173/admin/index.html](http://localhost:5173/admin/index.html)
 
+### Routes
+
+| Route | Content |
+|---|---|
+| `/` | Home page |
+| `/about` | About page |
+| `/services` | Programs/Services page |
+| `/team` | Team page |
+| `/testimonials` | Testimonials page |
+| `/contact` | Contact page |
+| `/*` | 404 page (falls back from any unknown route) |
+
+Hash links (`/#contact`) scroll to a section anchor within the current page after the page loads. Full route links (`/about`) navigate to another page.
+
 ### Building
 
 ```bash
@@ -61,7 +75,7 @@ pnpm build          # Build with Tina Cloud (set .env vars first)
 
 ## Deploying
 
-Client-side SPA — `pnpm build` produces `dist/index.html` + assets. Requires a rewrite/fallback to `index.html`:
+Client-side SPA — `pnpm build` produces `dist/index.html` + assets. Requires a rewrite/fallback to `index.html` for client-side routing:
 
 - **Vercel** — `vercel.json` (included) handles it automatically
 - **GitHub Pages** — see `.github/workflows/deploy.yml`

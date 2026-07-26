@@ -38,7 +38,7 @@
   align-items: center;
   justify-content: center;
   background: var(--primary);
-  color: var(--white, #fff);
+  color: var(--white);
   font-size: 0.85rem;
   font-weight: 700;
   border-radius: var(--radius);

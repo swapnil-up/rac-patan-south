@@ -1,6 +1,7 @@
 import { tinaField } from "tinacms/dist/react";
-import { useState } from "react";
 import type { PageSectionsContact, SettingsPartsFragment } from "../../tina/__generated__/types";
+import { useContactForm } from "../hooks/useContactForm";
+import SectionShell from "./SectionShell";
 import styles from "./ContactSection.module.css";
 
 export default function ContactSection({
@@ -10,43 +11,22 @@ export default function ContactSection({
   section: PageSectionsContact;
   settings: SettingsPartsFragment;
 }) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const { name, setName, email, setEmail, message, setMessage, status, submit } =
+    useContactForm(settings?.formEndpoint);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!settings?.formEndpoint) {
-      setStatus("error");
-      return;
-    }
-    setStatus("loading");
-    try {
-      const res = await fetch(settings.formEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
-      if (!res.ok) throw new Error("Failed to send message");
-      setStatus("success");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch {
-      setStatus("error");
-    }
+    await submit();
   }
 
   return (
-    <section id="contact" className="section">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title" data-tina-field={tinaField(section, "title")}>{section.title}</h2>
-          {section.subtitle && (
-            <p className="section-subtitle" data-tina-field={tinaField(section, "subtitle")}>{section.subtitle}</p>
-          )}
-        </div>
+    <SectionShell
+      id="contact"
+      title={section.title}
+      subtitle={section.subtitle}
+      titleField={tinaField(section, "title")}
+      subtitleField={tinaField(section, "subtitle")}
+    >
         <div className={styles.grid}>
           <div className={styles.info}>
             {settings?.contactEmail && (
@@ -157,7 +137,6 @@ export default function ContactSection({
               )}
             </form>
         </div>
-      </div>
-    </section>
+    </SectionShell>
   );
 }

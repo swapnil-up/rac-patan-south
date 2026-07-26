@@ -1,4 +1,5 @@
 import { tinaField } from "tinacms/dist/react";
+import { Link } from "react-router-dom";
 import type { SettingsPartsFragment } from "../../tina/__generated__/types";
 import styles from "./Footer.module.css";
 
@@ -16,7 +17,7 @@ export default function Footer({ settings }: { settings: SettingsPartsFragment }
           <div className={styles.links}>
             <h4>Quick Links</h4>
             {navLinks.map((link, i) => (
-              <a key={`${link?.label}-${i}`} href={link?.url || "#"} data-tina-field={tinaField(settings, "navLinks", i)}>{link?.label}</a>
+              <Link key={`${link?.label}-${i}`} to={link?.url || "#"} data-tina-field={tinaField(settings, "navLinks", i)}>{link?.label}</Link>
             ))}
           </div>
           <div className={styles.social}>

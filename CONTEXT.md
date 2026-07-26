@@ -34,7 +34,7 @@ Content lives in `content/` as markdown files. TinaCMS auto-generates types and 
 
 | Collection | Path | Description |
 |---|---|---|
-| Page | `content/page/` | Static pages with sections (home, about, join) |
+| Page | `content/page/` | Static pages with sections (hero, about, services, team, testimonials, contact, CTA) |
 | Team | `content/team/` | Club members/board |
 | Testimonial | `content/testimonial/` | Quotes from beneficiaries/partners |
 | Settings | `content/settings/` | Global site config, brand colors, nav |
@@ -47,28 +47,29 @@ Content lives in `content/` as markdown files. TinaCMS auto-generates types and 
 - Resources — `content/resources/`
 
 ### Brand theming
-All brand colors are configured in `content/settings/global.json → brand.colors` and injected as CSS custom properties by `src/App.tsx:applyBrandTheme()`. No hardcoded colors in components or CSS.
+All brand colors are in `content/settings/global.json → brand.colors` and injected as CSS custom properties. Every component uses `var(--*)` — no hardcoded brand colors in components. Structural tokens (`--white`, `--card-bg`, `--shadow-*`, `--radius-*`, `--font-*`) have defaults in `:root` in `styles.css`.
 
-## Routing
+Color fields: `primary`, `primaryDark`, `primaryLight`, `accent`, `accentLight`, `accentHover`, `gold`, `goldLight`, `goldHover`, `green`, `greenLight`, `footerBg`, `heroBgStart`, `bodyBg`
 
-Currently a single-page with hash anchors. Planned: React Router with proper routes:
+### Routing
+React Router with `BrowserRouter`. Routes resolve to page slugs in TinaCMS (`/services` → loads `content/page/services.mdx`). Hash links (`/#contact`) scroll to section anchors within a page.
 
 | Route | Content |
 |---|---|
-| `/` | Home page (sections) |
-| `/blog` | Blog list |
-| `/blog/:slug` | Blog post |
-| `/events` | Events list |
-| `/events/:slug` | Event detail |
-| `/gallery` | Gallery album grid |
-| `/gallery/:album` | Album photos |
-| `/join` | Membership page |
-| `/resources` | Downloads |
+| `/` | Home page |
+| `/about` | About page |
+| `/services` | Programs/Services page |
+| `/team` | Team page |
+| `/testimonials` | Testimonials page |
+| `/contact` | Contact page |
+| `/*` | 404 page |
 
 ## For agents
 
 When editing:
-1. Content schemas live in `tina/collections/`. After changing a schema, rebuild with `pnpm build-local` to regenerate types.
-2. Components live in `src/components/`. Props must use generated types from `tina/__generated__/types` (never `Record<string, unknown>`).
-3. CSS uses CSS Modules. Colors must use `var(--*)` custom properties — never hardcode hex/rgba.
-4. Routing uses `NavigateContext` from `src/navigate.ts` (not React Router yet).
+
+1. **Content schemas** live in `tina/collections/`. After changing a schema, rebuild with `pnpm build-local` to regenerate types.
+2. **Components** live in `src/components/`. Props must use generated types from `tina/__generated__/types` — never `Record<string, unknown>` or inline anonymous types.
+3. **CSS** uses CSS Modules. Colors must use `var(--*)` custom properties — never hardcode hex/rgba values.
+4. **Routing** uses React Router (`Link`).
+5. **Build** with `pnpm build-local` — this runs TinaCMS type generation + Vite production build.

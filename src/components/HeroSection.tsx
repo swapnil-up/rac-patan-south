@@ -1,4 +1,5 @@
 import { tinaField } from "tinacms/dist/react";
+import { Link } from "react-router-dom";
 import type { PageSectionsHero } from "../../tina/__generated__/types";
 import styles from "./HeroSection.module.css";
 
@@ -12,16 +13,16 @@ export default function HeroSection({ section }: { section: PageSectionsHero }) 
       id="hero"
       className={styles.hero}
       style={bgImage ? { backgroundImage: bgImage } : undefined}
-      {...(section.backgroundImage ? { "aria-label": `Photo: ${section.headline || "Hero background"}` } : {})}
+      aria-label={section.backgroundImage ? `Photo: ${section.headline || "Hero background"}` : undefined}
     >
       <div className={styles.overlay} />
       <div className={styles.content}>
         <h1 className={styles.headline} data-tina-field={tinaField(section, "headline")}>{section.headline}</h1>
         {section.subtext && <p className={styles.subtext} data-tina-field={tinaField(section, "subtext")}>{section.subtext}</p>}
         {section.ctaText && (
-          <a href={section.ctaLink || "#"} className="btn btn-accent" data-tina-field={tinaField(section, "ctaText")}>
+          <Link to={section.ctaLink || "#"} className="btn btn-accent" data-tina-field={tinaField(section, "ctaText")}>
             {section.ctaText}
-          </a>
+          </Link>
         )}
       </div>
     </section>
