@@ -1,6 +1,8 @@
 ---
-name: Treasurer Name
+name: Smarika Maharjan
 role: Treasurer
-photo: ''
-bio: Treasurer managing club finances, budgeting for service projects, and ensuring financial transparency.
+photo: /uploads/team/2026-27-smarika-maharjan.jpg
+bio: Treasurer of RAC Patan South for Rota Year 2026-27.
+term: 2026-27
+order: 4
 ---

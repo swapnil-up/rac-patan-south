@@ -9,6 +9,7 @@ import contactTemplate from "../templates/contact.template";
 import ctaTemplate from "../templates/cta.template";
 import newsletterTemplate from "../templates/newsletter.template";
 import sponsorGridTemplate from "../templates/sponsor-grid.template";
+import latestEventsTemplate from "../templates/latest-events.template";
 
 export default {
   label: "Pages",
@@ -32,6 +33,7 @@ export default {
         ctaTemplate,
         newsletterTemplate,
         sponsorGridTemplate,
+        latestEventsTemplate,
       ],
     },
   ],

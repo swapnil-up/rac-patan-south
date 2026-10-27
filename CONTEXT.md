@@ -35,7 +35,8 @@ Content lives in `content/` as markdown files. TinaCMS auto-generates types and 
 | Collection | Path | Description |
 |---|---|---|
 | Page | `content/page/` | Static pages with sections (hero, about, services, team, testimonials, contact, CTA) |
-| Team | `content/team/` | Club members/board |
+| Team | `content/team/` | Current club members/board profiles |
+| Team Terms | `content/team-terms/` | Presidents and boards by Rota year |
 | Testimonial | `content/testimonial/` | Quotes from beneficiaries/partners |
 | Settings | `content/settings/` | Global site config, brand colors, nav |
 
@@ -63,6 +64,7 @@ React Router with `BrowserRouter`. Routes resolve to page slugs in TinaCMS (`/se
 | `/events/:slug` | Event detail |
 | `/gallery` | Gallery grid |
 | `/gallery/:album` | Album detail |
+| `/team` | Current and past presidents and boards |
 | `/resources` | Resources |
 | `/*` | 404 page |
 

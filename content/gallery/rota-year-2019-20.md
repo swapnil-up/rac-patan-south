@@ -1,0 +1,23 @@
+---
+title: "Rota Year 2019-20"
+slug: "rota-year-2019-20"
+date: "2019-07-01T00:00:00.000Z"
+cover: "/uploads/events/2020-06-24-quarantine-art-festival.jpg"
+photos:
+  - image: "/uploads/events/2020-06-24-quarantine-art-festival.jpg"
+    caption: "Quarantine Art Festival (June 2020)"
+  - image: "/uploads/events/2020-06-24-quarantine-art-festival-2.jpg"
+    caption: "Quarantine Art Festival (June 2020)"
+  - image: "/uploads/events/2020-06-24-quarantine-art-festival-3.jpg"
+    caption: "Quarantine Art Festival (June 2020)"
+  - image: "/uploads/events/2020-06-21-international-yoga-day-session.jpg"
+    caption: "International Yoga Day Session (June 2020)"
+  - image: "/uploads/events/2020-06-18-some-glimpses-of-our-professional-service-projects-public-speaking.jpg"
+    caption: "Some glimpses of our Professional Service Projects: - Public Speaking (June 2020)"
+  - image: "/uploads/events/2020-06-15-increasing-digital-literacy.jpg"
+    caption: "Increasing Digital Literacy (June 2020)"
+  - image: "/uploads/events/2020-06-15-here-are-some-of-the-glimpses-of-our-community-service-projects-reusable-sanitary-pad-workshop.jpg"
+    caption: "Here are some of the glimpses of our community service projects. - Reusable Sanitary Pad workshop (June 2020)"
+  - image: "/uploads/events/2020-06-15-further-glimpse-of-community-service-projects-blood-donation-camp.jpg"
+    caption: "Further glimpse of Community Service Projects - Blood Donation Camp (June 2020)"
+---

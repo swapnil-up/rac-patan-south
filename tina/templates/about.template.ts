@@ -27,5 +27,33 @@ export default {
       name: "image",
       label: "Image",
     },
+    {
+      type: "string",
+      name: "imageCaption",
+      label: "Image Caption",
+    },
+    {
+      type: "object",
+      name: "stats",
+      label: "Impact Stats",
+      list: true,
+      ui: {
+        itemProps(item) {
+          return { label: item?.label || "Stat" };
+        },
+      },
+      fields: [
+        {
+          type: "string",
+          name: "value",
+          label: "Value",
+        },
+        {
+          type: "string",
+          name: "label",
+          label: "Label",
+        },
+      ],
+    },
   ],
 } satisfies Template;

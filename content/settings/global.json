@@ -9,17 +9,14 @@
     { "label": "Blog", "url": "/blog" },
     { "label": "Events", "url": "/events" },
     { "label": "Gallery", "url": "/gallery" },
+    { "label": "Team", "url": "/team" },
     { "label": "Join", "url": "/join" },
     { "label": "Resources", "url": "/resources" }
   ],
   "socialLinks": [
     {
-      "label": "Facebook",
-      "url": "#"
-    },
-    {
-      "label": "Twitter",
-      "url": "#"
+      "label": "Instagram",
+      "url": "https://www.instagram.com/racpatansouth/"
     }
   ],
   "formEndpoint": "",
@@ -28,20 +25,20 @@
     "logo": "",
     "favicon": "",
     "colors": {
-      "primary": "#d41367",
-      "primaryDark": "#b00053",
-      "primaryLight": "#fbe1ee",
-      "accent": "#e02927",
-      "accentLight": "#fceaea",
-      "accentHover": "#c2201f",
-      "gold": "#f7a81b",
-      "goldLight": "#fef0d5",
-      "goldHover": "#e09000",
-      "green": "#009739",
-      "greenLight": "#d4f0d9",
-      "footerBg": "#657f99",
-      "heroBgStart": "#4a0d28",
-      "bodyBg": "#faf8f5"
+      "primary": "#7d1f2c",
+      "primaryDark": "#56131d",
+      "primaryLight": "#f1dcd8",
+      "accent": "#d41367",
+      "accentLight": "#fbe1ee",
+      "accentHover": "#b00053",
+      "gold": "#c4923f",
+      "goldLight": "#f3e6c9",
+      "goldHover": "#9c712a",
+      "green": "#4f6b57",
+      "greenLight": "#dde6da",
+      "footerBg": "#241513",
+      "heroBgStart": "#2d0d15",
+      "bodyBg": "#f4ebdd"
     }
   }
 }

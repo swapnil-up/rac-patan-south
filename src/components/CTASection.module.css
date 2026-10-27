@@ -1,34 +1,85 @@
 .cta {
-  background: linear-gradient(160deg, var(--primary) 0%, var(--primary-dark) 50%, var(--hero-bg-start) 100%);
-  padding: 5rem 0;
-  text-align: center;
   position: relative;
   overflow: hidden;
+  background: var(--hero-bg-start);
+  color: var(--white);
+  padding: 5rem 0;
 }
 
 .cta::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 30% 50%, rgba(var(--accent-rgb, 224, 41, 39), 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+  background-image: url("../assets/lattice.svg");
+  background-size: 64px 64px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px;
+  background: var(--gold);
+  opacity: 0.09;
+  -webkit-mask-image: url("../assets/patan-skyline.svg");
+  mask-image: url("../assets/patan-skyline.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  mask-position: center bottom;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  pointer-events: none;
 }
 
 .content {
   position: relative;
   z-index: 1;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
+}
+
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.6rem;
 }
 
 .text {
   font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: clamp(2.1rem, 4.8vw, 4rem);
+  font-weight: 500;
+  font-style: italic;
   color: var(--white);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+.script {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(7rem, 15vw, 13rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(196, 146, 63, 0.3);
+  opacity: 0.55;
+  pointer-events: none;
+  user-select: none;
 }
 
 @media (max-width: 768px) {
@@ -36,7 +87,13 @@
     padding: 3.5rem 0;
   }
 
-  .text {
-    font-size: 1.5rem;
+  .content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .script {
+    right: -1rem;
+    opacity: 0.35;
   }
 }

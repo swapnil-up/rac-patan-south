@@ -6,111 +6,138 @@ import { useSettingsContext } from "../hooks/SettingsContext";
 import ThemeStyle from "../components/ThemeStyle";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import SectionShell from "../components/SectionShell";
+import PageHeader from "../components/PageHeader";
 import styles from "./BlogListPage.module.css";
 
 const PAGE_SIZE = 9;
+
+function formatDate(date: string) {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
 
 export default function BlogListPage() {
   const { settings } = useSettingsContext();
   const [posts, setPosts] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
-  const [cursor, setCursor] = useState<string | null>(null);
-  const [hasMore, setHasMore] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
-  function isBlogDir(n: Record<string, unknown> | null | undefined): boolean {
-    if (n == null) return false;
-    const sys = n._sys as Record<string, unknown> | undefined;
+  function isBlogDir(node: Record<string, unknown> | null | undefined): boolean {
+    if (node == null) return false;
+    const sys = node._sys as Record<string, unknown> | undefined;
     return typeof sys?.path === "string" && (sys.path as string).startsWith("content/blog/");
   }
 
-  async function loadPosts(after?: string | null) {
+  async function loadPosts() {
     setLoading(true);
     try {
-      const res = await client.queries.blogConnection({
-        first: PAGE_SIZE,
-        sort: "-date",
-        after,
-      });
+      const res = await client.queries.blogConnection({ first: 200, sort: "date" });
       const nodes = ((res.data.blogConnection.edges || [])
-        .map((e) => e?.node)
-        .filter((n) => n != null && isBlogDir(n as Record<string, unknown>)) as Blog[]);
-      if (after) {
-        setPosts((prev) => [...prev, ...nodes]);
-      } else {
-        setPosts(nodes);
-      }
-      const pageInfo = res.data.blogConnection.pageInfo;
-      setCursor(pageInfo.endCursor);
-      setHasMore(pageInfo.hasNextPage);
-    } catch (e) {
-      console.error("BlogListPage: failed to load posts", e);
-      if (!after) {
-        try {
-          const res = await client.queries.blogConnection({
-            first: 2,
-            sort: "-date",
-          });
-          setPosts(((res.data.blogConnection.edges || [])
-            .map((e) => e?.node)
-            .filter((n) => n != null && isBlogDir(n as Record<string, unknown>)) as Blog[]));
-        } catch (e2) {
-          console.error("BlogListPage: fallback also failed", e2);
-        }
-      }
+        .map((edge) => edge?.node)
+        .filter((node) => node != null && isBlogDir(node as Record<string, unknown>)) as Blog[])
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      setPosts(nodes);
+    } catch (error) {
+      console.error("BlogListPage: failed to load posts", error);
     } finally {
       setLoading(false);
     }
   }
 
   useEffect(() => {
-    loadPosts(null);
+    loadPosts();
   }, []);
+
+  const featured = posts[0];
+  const rest = posts.slice(1, visibleCount);
 
   return (
     <>
       {settings && <ThemeStyle settings={settings} />}
       {settings && <Navbar settings={settings} />}
-      <main>
-        <SectionShell id="blog-list" title="Blog" subtitle="Stories, updates, and insights from RAC Patan South" visible>
-          {posts.length === 0 && !loading && (
-            <p className={styles.empty}>No posts yet. Check back soon!</p>
-          )}
-          <div className={styles.grid}>
-            {posts.map((post) => {
-              const slug = post.slug || post._sys.filename;
-              const dateStr = new Date(post.date).toLocaleDateString("en-US", {
-                year: "numeric", month: "short", day: "numeric",
-              });
-              return (
-                <Link key={post.id} to={`/blog/${slug}`} className={styles.card}>
-                  {post.coverImage && (
-                    <div className={styles.cardImage}>
-                      <img src={post.coverImage} alt={post.title} />
+      <main id="main-content">
+        <PageHeader
+          eyebrow="Journal · Archive"
+          title="Stories from Patan South"
+          description="A living record of the projects, people, and moments that have shaped the club since 2012."
+        >
+          <span className={styles.count}>{loading ? "Opening the archive…" : `${posts.length} stories`}</span>
+        </PageHeader>
+
+        <section className="section">
+          <div className="container">
+            {loading && <p className={styles.empty}>Opening the archive…</p>}
+            {!loading && posts.length === 0 && (
+              <p className={styles.empty}>No stories yet. Check back soon.</p>
+            )}
+
+            {featured && (
+              <Link to={`/blog/${featured.slug || featured._sys.filename}`} className={styles.featured}>
+                <div className={styles.featuredMedia}>
+                  {featured.coverImage ? (
+                    <img src={featured.coverImage} alt={featured.title} />
+                  ) : (
+                    <div className={styles.featuredFallback} aria-hidden="true">
+                      <span>पाटन</span>
+                      <small>From the archive</small>
                     </div>
                   )}
-                  <div className={styles.cardBody}>
-                    <time className={styles.cardDate}>{dateStr}</time>
-                    <h3 className={styles.cardTitle}>{post.title}</h3>
-                    {post.excerpt && <p className={styles.cardExcerpt}>{post.excerpt}</p>}
-                    {post.author && <span className={styles.cardAuthor}>{post.author}</span>}
-                  </div>
-                </Link>
-              );
-            })}
+                </div>
+                <div className={styles.featuredBody}>
+                  <p className={styles.kicker}>Latest story</p>
+                  <time className={styles.date}>{formatDate(featured.date)}</time>
+                  <h2 className={styles.featuredTitle}>{featured.title}</h2>
+                  {featured.excerpt && <p className={styles.featuredExcerpt}>{featured.excerpt}</p>}
+                  <span className="text-link">
+                    Read the story <span aria-hidden="true">→</span>
+                  </span>
+                </div>
+              </Link>
+            )}
+
+            {rest.length > 0 && (
+              <div className={styles.archive}>
+                {rest.map((post, index) => (
+                  <Link
+                    key={post.id}
+                    to={`/blog/${post.slug || post._sys.filename}`}
+                    className={styles.row}
+                  >
+                    <span className={styles.index}>{String(index + 2).padStart(2, "0")}</span>
+                    <div className={styles.rowBody}>
+                      <div className={styles.rowMeta}>
+                        <time>{formatDate(post.date)}</time>
+                        {post.author && <span>{post.author}</span>}
+                      </div>
+                      <h3 className={styles.rowTitle}>{post.title}</h3>
+                      {post.excerpt && <p className={styles.rowExcerpt}>{post.excerpt}</p>}
+                    </div>
+                    {post.coverImage && (
+                      <div className={styles.thumb}>
+                        <img src={post.coverImage} alt="" loading="lazy" />
+                      </div>
+                    )}
+                    <span className={styles.arrow} aria-hidden="true">↗</span>
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {visibleCount < posts.length && (
+              <div className={styles.loadMore}>
+                <button
+                  className="btn btn-secondary"
+                  onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+                >
+                  Load more stories
+                </button>
+              </div>
+            )}
           </div>
-          {hasMore && (
-            <div className={styles.loadMore}>
-              <button
-                className="btn btn-primary"
-                onClick={() => loadPosts(cursor)}
-                disabled={loading}
-              >
-                {loading ? "Loading..." : "Load More"}
-              </button>
-            </div>
-          )}
-        </SectionShell>
+        </section>
       </main>
       {settings && <Footer settings={settings} />}
     </>

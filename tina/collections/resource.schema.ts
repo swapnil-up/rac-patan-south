@@ -23,6 +23,18 @@ export default {
       ui: { component: "textarea" },
     },
     {
+      type: "string",
+      name: "link",
+      label: "Link URL",
+      description: "External link to the resource. Used when no file is uploaded.",
+    },
+    {
+      type: "string",
+      name: "source",
+      label: "Source",
+      description: "Publisher or organisation, for example Rotary International or Rotaract District 3292.",
+    },
+    {
       type: "image",
       name: "file",
       label: "File",

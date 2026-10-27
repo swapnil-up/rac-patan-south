@@ -1,49 +1,333 @@
 .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
   position: relative;
-  background: linear-gradient(160deg, var(--hero-bg-start) 0%, var(--primary-dark) 30%, var(--primary) 60%, var(--primary-light) 130%);
-  background-size: cover;
-  background-position: center;
   overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
+  padding: calc(var(--nav-height) + 3.5rem) 0 4.5rem;
+  min-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background:
-    radial-gradient(ellipse at 20% 80%, rgba(var(--accent-rgb, 196, 115, 94), 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
-  z-index: 1;
+    radial-gradient(circle at 78% 12%, rgba(196, 146, 63, 0.18) 0%, transparent 42%),
+    linear-gradient(180deg, var(--paper-light) 0%, var(--body-bg) 78%);
 }
 
-.content {
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: var(--border);
+}
+
+.skyline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 190px;
+  background: var(--brick);
+  opacity: 0.07;
+  -webkit-mask-image: url("../assets/patan-skyline.svg");
+  mask-image: url("../assets/patan-skyline.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center bottom;
+  mask-position: center bottom;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  pointer-events: none;
+}
+
+.script {
+  position: absolute;
+  right: -1rem;
+  top: calc(var(--nav-height) + 1rem);
+  font-family: var(--font-display);
+  font-size: clamp(7rem, 18vw, 16rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--border-strong);
+  opacity: 0.32;
+  pointer-events: none;
+  user-select: none;
+}
+
+.grid {
   position: relative;
   z-index: 2;
-  max-width: 760px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  text-align: center;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.copy {
+  max-width: 38rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-ui);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brick-dark);
+  margin-bottom: 1.15rem;
+}
+
+.eyebrowRule {
+  width: 2.2rem;
+  height: 1px;
+  background: var(--gold);
 }
 
 .headline {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.5rem;
+  font-size: clamp(3rem, 6.4vw, 5.7rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+  margin-bottom: 1.4rem;
 }
 
 .subtext {
   font-family: var(--font-body);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(1.02rem, 1.8vw, 1.2rem);
+  color: var(--text-muted);
   line-height: 1.7;
-  margin-bottom: 2.5rem;
-  max-width: 560px;
+  max-width: 34rem;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.visual {
+  position: relative;
+  min-height: 560px;
+}
+
+.collage {
+  position: absolute;
+  inset: 0;
+}
+
+.photo {
+  position: absolute;
+}
+
+.photo1 {
+  top: 0;
+  right: 0;
+  width: 64%;
+  z-index: 2;
+}
+
+.photo1 figcaption {
+  text-align: right;
+}
+
+.photo2 {
+  left: 0;
+  bottom: 0;
+  width: 49%;
+  z-index: 3;
+}
+
+.photo3 {
+  left: 12%;
+  top: 23%;
+  width: 36%;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.stamp {
+  position: absolute;
+  right: 2%;
+  bottom: 1rem;
+  z-index: 4;
+  width: 118px;
+  height: 118px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  text-align: center;
+  background: var(--paper-light);
+  color: var(--primary);
+  transform: rotate(-8deg);
+  box-shadow: var(--shadow-md);
+}
+
+.stamp::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+}
+
+.stampTop {
+  font-family: var(--font-ui);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.stampText {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.1;
+  max-width: 5.5rem;
+}
+
+.stampYear {
+  font-family: var(--font-ui);
+  font-size: 0.48rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.bottomLine {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 3.5rem auto 0;
+  padding: 1.1rem 1.75rem 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+
+.bottomMark {
+  color: var(--brick-dark);
+}
+
+.solo {
+  min-height: 66vh;
+  justify-content: center;
+}
+
+.solo .grid {
+  grid-template-columns: minmax(0, 860px);
+  justify-content: center;
+  text-align: center;
+}
+
+.solo .copy {
+  margin: 0 auto;
+}
+
+.solo .eyebrow {
+  justify-content: center;
+}
+
+.solo .subtext {
   margin-left: auto;
   margin-right: auto;
+}
+
+.solo .actions {
+  justify-content: center;
+}
+
+.solo .bottomLine {
+  margin-top: 3rem;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: calc(var(--nav-height) + 2.75rem) 0 3rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .copy {
+    max-width: 42rem;
+  }
+
+  .visual {
+    min-height: auto;
+  }
+
+  .collage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+  }
+
+  .photo {
+    position: static;
+    width: auto;
+  }
+
+  .photo1 {
+    grid-column: 1 / -1;
+  }
+
+  .photo3 {
+    opacity: 1;
+  }
+
+  .stamp {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: 95px;
+    height: 95px;
+  }
+
+  .stampText {
+    font-size: 0.66rem;
+  }
+
+  .script {
+    top: calc(var(--nav-height) + 0.5rem);
+    right: -2rem;
+    opacity: 0.2;
+  }
+
+  .bottomLine {
+    margin-top: 2.5rem;
+    padding-left: 1.15rem;
+    padding-right: 1.15rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .headline {
+    font-size: clamp(2.7rem, 13vw, 3.8rem);
+  }
+
+  .bottomLine {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
 }

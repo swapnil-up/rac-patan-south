@@ -1,6 +1,8 @@
 ---
-name: President Name
+name: Yukie Maharjan
 role: President
-photo: ''
-bio: President of RAC Patan South for the term 2026-27. Leading the club in service, fellowship, and professional development initiatives.
+photo: /uploads/team/2026-27-yukie-maharjan.jpg
+bio: President of RAC Patan South for Rota Year 2026-27.
+term: 2026-27
+order: 1
 ---

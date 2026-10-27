@@ -1,3 +1,5 @@
+import SectionHeader from "./SectionHeader";
+
 export default function SectionShell({
   id,
   alt,
@@ -5,6 +7,8 @@ export default function SectionShell({
   subtitle,
   titleField,
   subtitleField,
+  eyebrow,
+  align = "left",
   children,
   visible,
 }: {
@@ -14,6 +18,8 @@ export default function SectionShell({
   subtitle?: string | null;
   titleField?: string;
   subtitleField?: string;
+  eyebrow?: string;
+  align?: "left" | "center";
   children: React.ReactNode;
   visible?: boolean;
 }) {
@@ -21,12 +27,14 @@ export default function SectionShell({
   return (
     <section id={id} className={cls}>
       <div className="container">
-        <div className="section-header">
-          <h2 className="section-title" data-tina-field={titleField}>{title}</h2>
-          {subtitle && (
-            <p className="section-subtitle" data-tina-field={subtitleField}>{subtitle}</p>
-          )}
-        </div>
+        <SectionHeader
+          title={title}
+          subtitle={subtitle}
+          eyebrow={eyebrow}
+          titleField={titleField}
+          subtitleField={subtitleField}
+          align={align}
+        />
         {children}
       </div>
     </section>

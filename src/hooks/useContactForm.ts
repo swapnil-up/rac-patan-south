@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-type SubmitFn = (body: { name: string; email: string; message: string }) => Promise<Response>;
+type SubmitFn = (endpoint: string, init: RequestInit) => Promise<Response>;
 
 export function useContactForm(endpoint: string | undefined | null) {
   const [name, setName] = useState("");
@@ -15,7 +15,7 @@ export function useContactForm(endpoint: string | undefined | null) {
     }
     setStatus("loading");
     try {
-      const send = submitter ?? fetch;
+      const send: SubmitFn = submitter ?? ((url, init) => fetch(url, init));
       const res = await send(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

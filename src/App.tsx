@@ -8,6 +8,8 @@ import ThemeStyle from "./components/ThemeStyle";
 import type {
   PageQuery,
   PageQueryVariables,
+  PageSectionsTeam,
+  PageSectionsTestimonials,
   SettingsQuery,
   SettingsQueryVariables,
   SettingsPartsFragment,
@@ -25,6 +27,7 @@ import ContactSection from "./components/ContactSection";
 import CTASection from "./components/CTASection";
 import NewsletterSection from "./components/NewsletterSection";
 import SponsorGridSection from "./components/SponsorGridSection";
+import LatestEventsSection from "./components/LatestEventsSection";
 import Footer from "./components/Footer";
 
 import BlogListPage from "./pages/BlogListPage";
@@ -34,6 +37,7 @@ import EventDetailPage from "./pages/EventDetailPage";
 import GalleryGridPage from "./pages/GalleryGridPage";
 import AlbumDetailPage from "./pages/AlbumDetailPage";
 import ResourcesPage from "./pages/ResourcesPage";
+import TeamPage from "./pages/TeamPage";
 
 import "./styles.css";
 
@@ -63,9 +67,9 @@ function SectionRenderer({
     case "PageSectionsServices":
       return <ServicesSection section={section} />;
     case "PageSectionsTeam":
-      return <TeamSection section={section} />;
+      return <TeamSection section={section as unknown as PageSectionsTeam} />;
     case "PageSectionsTestimonials":
-      return <TestimonialsSection section={section} />;
+      return <TestimonialsSection section={section as unknown as PageSectionsTestimonials} />;
     case "PageSectionsContact":
       return <ContactSection section={section} settings={settings} />;
     case "PageSectionsCta":
@@ -74,6 +78,8 @@ function SectionRenderer({
       return <NewsletterSection section={section} settings={settings} />;
     case "PageSectionsSponsorGrid":
       return <SponsorGridSection section={section} />;
+    case "PageSectionsLatestEvents":
+      return <LatestEventsSection section={section} />;
     default:
       return null;
   }
@@ -136,6 +142,8 @@ function LoadedApp({
   const sections = (pageData.page.sections || []).filter((s): s is PageSectionData => s != null);
 
   useEffect(() => {
+    document.documentElement.classList.add("reveal-ready");
+    const root = rootRef.current ?? document;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -148,15 +156,30 @@ function LoadedApp({
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
 
-    const els = (rootRef.current ?? document).querySelectorAll(".section");
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    const observed = new WeakSet<Element>();
+    const observeSections = () => {
+      root.querySelectorAll(".section").forEach((el) => {
+        if (observed.has(el) || el.classList.contains("is-visible")) return;
+        observed.add(el);
+        observer.observe(el);
+      });
+    };
+
+    observeSections();
+    const mutations = new MutationObserver(observeSections);
+    mutations.observe(root, { childList: true, subtree: true });
+
+    return () => {
+      mutations.disconnect();
+      observer.disconnect();
+      document.documentElement.classList.remove("reveal-ready");
+    };
   }, [pageData]);
 
   return (
     <div ref={rootRef}>
       <Navbar settings={settings} />
-      <main>
+      <main id="main-content">
         {sections.map((section, i) => (
           <SectionRenderer
             key={`${section.__typename}-${i}`}
@@ -204,6 +227,9 @@ export default function App() {
   }
   if (slug === "resources") {
     return <ResourcesPage />;
+  }
+  if (slug === "team") {
+    return <TeamPage />;
   }
 
   if (pageState.status === "error") {

@@ -3,6 +3,7 @@ import { defineConfig } from "tinacms";
 import settingsCollection from "./collections/settings.schema";
 import pageCollection from "./collections/page.schema";
 import teamCollection from "./collections/team.schema";
+import teamTermCollection from "./collections/teamTerm.schema";
 import testimonialCollection from "./collections/testimonial.schema";
 import blogCollection from "./collections/blog.schema";
 import eventCollection from "./collections/event.schema";
@@ -35,6 +36,7 @@ export default defineConfig({
       settingsCollection,
       pageCollection,
       teamCollection,
+      teamTermCollection,
       testimonialCollection,
       blogCollection,
       eventCollection,

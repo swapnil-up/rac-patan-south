@@ -18,8 +18,7 @@ export default function SponsorGridSection({ section }: { section: PageSectionsS
         const res = await client.queries.sponsorConnection({});
         if (cancelled) return;
         const nodes = (res.data.sponsorConnection.edges || [])
-          .map((e) => e?.node)
-          .filter((n): n is Sponsor => n != null);
+          .flatMap((e) => (e?.node ? [e.node] : [])) as unknown as Sponsor[];
         setSponsors(nodes);
       } catch (e) {
         console.error("SponsorGridSection: failed to load sponsors", e);

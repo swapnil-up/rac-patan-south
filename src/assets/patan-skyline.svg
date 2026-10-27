@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M0 218h1440" opacity=".55" />
+  <path d="M0 226h1440" opacity=".2" />
+
+  <!-- stupa -->
+  <path d="M84 218v-18h92v18" />
+  <path d="M95 200v-12h70v12" />
+  <path d="M111 188c0-24 38-24 38 0" />
+  <path d="M130 164v-13m-8 13v-9m16 9v-9" />
+  <path d="M120 151h20m-16-6h12m-8-6h4" />
+  <path d="M88 218v-8h84v8" opacity=".5" />
+
+  <!-- temple one -->
+  <path d="M246 218v-15h214v15" />
+  <path d="M262 203v-9h182v9" />
+  <path d="M278 194v-8h150v8" />
+  <path d="M290 186v-25h126v25" />
+  <path d="M302 161v-22h102v22" />
+  <path d="M274 139l80-33 80 33" />
+  <path d="M298 124l56-26 56 26" />
+  <path d="M324 109l30-18 30 18" />
+  <path d="M354 91V73m-8 8h16m-13-8h10m-7-8h4" />
+  <path d="M292 186v-8m22 8v-8m22 8v-8m22 8v-8m22 8v-8m22 8v-8m22 8v-8" opacity=".55" />
+
+  <!-- temple two, taller -->
+  <path d="M526 218v-18h242v18" />
+  <path d="M545 200v-10h204v10" />
+  <path d="M563 190v-9h168v9" />
+  <path d="M576 181v-38h142v38" />
+  <path d="M590 143v-28h114v28" />
+  <path d="M558 115l104-39 104 39" />
+  <path d="M584 98l78-31 78 31" />
+  <path d="M612 81l50-24 50 24" />
+  <path d="M662 57V36m-10 9h20m-16-9h12m-8-9h4" />
+  <path d="M590 143v-9m24 9v-9m24 9v-9m24 9v-9m24 9v-9m24 9v-9" opacity=".55" />
+  <path d="M620 181v-14h54v14" opacity=".55" />
+
+  <!-- temple three -->
+  <path d="M808 218v-16h204v16" />
+  <path d="M826 202v-9h168v9" />
+  <path d="M843 193v-8h134v8" />
+  <path d="M856 185v-29h108v29" />
+  <path d="M869 156v-23h82v23" />
+  <path d="M840 133l70-31 70 31" />
+  <path d="M863 118l47-23 47 23" />
+  <path d="M888 103l22-14 22 14" />
+  <path d="M910 89V69m-8 8h16m-13-8h10m-7-9h4" />
+  <path d="M869 156v-8m22 8v-8m22 8v-8m22 8v-8m22 8v-8" opacity=".55" />
+
+  <!-- palace facade -->
+  <path d="M1042 218v-38h252v38" />
+  <path d="M1052 180v-9h232v9" />
+  <path d="M1080 171v-22h26v22m38-22v22m38-22v22m38-22v22m38-22v22" opacity=".7" />
+  <path d="M1076 149l31-17 31 17m10 0l31-17 31 17m10 0l31-17 31 17m10 0l31-17 31 17" />
+  <path d="M1166 171v-32h26v32" opacity=".5" />
+
+  <!-- side shrines and stone pillar -->
+  <path d="M1320 218v-12h74v12" />
+  <path d="M1331 206v-8h52v8" />
+  <path d="M1345 198v-17h24v17" />
+  <path d="M1337 181l20-14 20 14" />
+  <path d="M1357 167v-11m-6 5h12" />
+  <path d="M1268 218v-35m-7 0h14m-11 7h8m-6 7h4m-2 7v14" opacity=".7" />
+  <path d="M1258 218h20" opacity=".5" />
+
+  <!-- birds -->
+  <path d="M400 64c5-5 10-5 14 0m8 0c5-5 10-5 14 0" opacity=".5" />
+  <path d="M974 42c4-4 8-4 11 0m7 0c4-4 8-4 11 0" opacity=".35" />
+</svg>
