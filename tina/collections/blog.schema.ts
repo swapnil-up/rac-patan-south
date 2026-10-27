@@ -51,6 +51,7 @@ export default {
       type: "rich-text",
       name: "body",
       label: "Body",
+      isBody: true,
     },
   ],
   ui: {

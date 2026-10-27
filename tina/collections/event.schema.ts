@@ -58,6 +58,43 @@ export default {
     },
     {
       type: "string",
+      name: "category",
+      label: "Category",
+      options: [
+        "community_service",
+        "professional_development",
+        "international_service",
+        "club_service",
+        "fellowship",
+        "fundraiser",
+        "partnership",
+        "installation",
+        "meeting",
+        "recruitment",
+        "other",
+      ],
+      ui: { component: "select" },
+    },
+    {
+      type: "string",
+      name: "rotaYear",
+      label: "Rotary Year",
+      description: "Rotary year in YYYY-YY format, e.g. 2024-25",
+    },
+    {
+      type: "string",
+      name: "sourceUrl",
+      label: "Source URL",
+      description: "Original Instagram or Blogspot post",
+    },
+    {
+      type: "string",
+      name: "sourceType",
+      label: "Source Type",
+      description: "instagram_post, instagram_reel, blogspot_post, or manual",
+    },
+    {
+      type: "string",
       name: "registrationLink",
       label: "Registration Link",
     },
@@ -65,6 +102,36 @@ export default {
       type: "image",
       name: "image",
       label: "Image",
+    },
+    {
+      type: "object",
+      name: "photos",
+      label: "Photos",
+      list: true,
+      ui: {
+        itemProps: (item: any) => ({
+          label: item?.caption || "Photo",
+        }),
+      },
+      fields: [
+        {
+          type: "image",
+          name: "image",
+          label: "Image",
+          required: true,
+        },
+        {
+          type: "string",
+          name: "caption",
+          label: "Caption",
+        },
+      ],
+    },
+    {
+      type: "rich-text",
+      name: "body",
+      label: "Body",
+      isBody: true,
     },
   ],
   ui: {

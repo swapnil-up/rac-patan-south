@@ -34,6 +34,18 @@ export default {
       label: "Biography",
       ui: { component: "textarea" },
     },
+    {
+      type: "string",
+      name: "term",
+      label: "Term",
+      description: "Rotary year or board term, e.g. 2015-16",
+    },
+    {
+      type: "number",
+      name: "order",
+      label: "Order",
+      description: "Display order within a term",
+    },
   ],
   ui: {
     filename: {

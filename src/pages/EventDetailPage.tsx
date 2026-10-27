@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 import client from "../../tina/__generated__/client";
 import type { Event } from "../../tina/__generated__/types";
 import { useSettingsContext } from "../hooks/SettingsContext";
@@ -69,6 +70,10 @@ export default function EventDetailPage({ slug }: { slug: string }) {
         year: "numeric", month: "long", day: "numeric",
       })
     : null;
+  const photos = (event.photos || []).filter((photo) => photo?.image);
+  const category = event.category
+    ? event.category.replace(/_/g, " ").replace(/\b\w/g, (letter) => letter.toUpperCase())
+    : null;
 
   return (
     <>
@@ -90,13 +95,30 @@ export default function EventDetailPage({ slug }: { slug: string }) {
                   {event.type}
                 </span>
               )}
+              {category && <span className={styles.category}>{category}</span>}
+              {event.rotaYear && <span>RY {event.rotaYear}</span>}
             </div>
             {event.location && <p className={styles.location}>{event.location}</p>}
           </header>
-          {event.description && (
-            <div className={styles.body}>
-              <p>{event.description}</p>
-            </div>
+          <div className={styles.body}>
+            {event.body ? (
+              <TinaMarkdown content={event.body} />
+            ) : (
+              event.description && <p>{event.description}</p>
+            )}
+          </div>
+          {photos.length > 0 && (
+            <section className={styles.gallerySection}>
+              <h2 className={styles.galleryTitle}>Photos</h2>
+              <div className={styles.gallery}>
+                {photos.map((photo) => (
+                  <figure key={photo?.image} className={styles.galleryItem}>
+                    <img src={photo?.image} alt={photo?.caption || event.title} loading="lazy" />
+                    {photo?.caption && <figcaption>{photo.caption}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            </section>
           )}
           {event.registrationLink && (
             <div className={styles.cta}>
@@ -107,6 +129,13 @@ export default function EventDetailPage({ slug }: { slug: string }) {
                 className="btn btn-primary"
               >
                 Register Now
+              </a>
+            </div>
+          )}
+          {event.sourceUrl && (
+            <div className={styles.source}>
+              <a href={event.sourceUrl} target="_blank" rel="noopener noreferrer">
+                View original post
               </a>
             </div>
           )}

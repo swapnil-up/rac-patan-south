@@ -40,6 +40,9 @@ yarn-error.log*
 # AI analysis output
 /llm
 
+# Raw scrape sources (large media, not part of the app)
+/_sources/
+
 # Package manager lock files — committed for reproducible builds
 # only ignore the ones we don't use
 package-lock.json
@@ -48,3 +51,7 @@ yarn.lock
 bun.lock
 bun.lockb
 deno.lock
+
+# Python
+__pycache__/
+*.pyc
