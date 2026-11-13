@@ -49,7 +49,14 @@ function getPageSlug(pathname: string): string {
 
 function getContentSlug(pathname: string): string | null {
   const segments = pathname.replace(/\/+$/, "").split("/").filter(Boolean);
-  return segments.length >= 2 ? segments[1] : null;
+  if (segments.length < 2) return null;
+  // The browser percent-encodes anything outside ASCII in the path, so the
+  // slug has to be decoded before it can be matched against the content.
+  try {
+    return decodeURIComponent(segments[1]);
+  } catch {
+    return segments[1];
+  }
 }
 
 function SectionRenderer({

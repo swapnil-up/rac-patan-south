@@ -28,7 +28,7 @@ export default function LatestEventsSection({ section }: { section: PageSections
     let cancelled = false;
     async function load() {
       try {
-        const res = await client.queries.eventConnection({ sort: "date", first: 200 });
+        const res = await client.queries.eventConnection({ sort: "date", first: 500 });
         if (cancelled) return;
         const nodes = (res.data.eventConnection.edges || [])
           .flatMap((edge) => (edge?.node ? [edge.node] : [])) as unknown as Event[];
