@@ -13,6 +13,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+      actions: write
 
     steps:
       - name: Checkout repository
@@ -41,7 +42,15 @@ jobs:
           git config user.name "rac-bot"
           git config user.email "bot@racpatansouth.org"
           git add -A
-          # No "[skip ci]" here: the Pages workflow deploys on a push to main,
-          # and the optimised pictures have to reach the site.
+          # No "[skip ci]" here: the optimised pictures have to reach the site.
           git commit -m "chore: optimize images"
           git push
+
+      - name: Deploy the site
+        # Asked for explicitly rather than left to the push trigger: a push
+        # that rewrites a thousand pictures is large enough that GitHub does
+        # not always start a workflow for it.
+        if: steps.changes.outputs.has_changes == 'true'
+        run: gh workflow run deploy.yml --ref main
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
