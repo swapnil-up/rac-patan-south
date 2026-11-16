@@ -7,11 +7,11 @@ description: "We were able to collect 27 pints of blood with the help of the Red
 category: "community_service"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
-image: "/uploads/events/2023-12-20-blood-donation-with-red-cross-pulchowk.jpg"
+image: "/uploads/events/2023-12-20-blood-donation-with-red-cross-pulchowk.webp"
 photos:
-  - image: "/uploads/events/2023-12-20-blood-donation-with-red-cross-pulchowk-2.jpg"
+  - image: "/uploads/events/2023-12-20-blood-donation-with-red-cross-pulchowk-2.webp"
     caption: ""
-  - image: "/uploads/events/2023-12-20-blood-donation-with-red-cross-pulchowk-3.jpg"
+  - image: "/uploads/events/2023-12-20-blood-donation-with-red-cross-pulchowk-3.webp"
     caption: ""
 registrationLink: ""
 ---

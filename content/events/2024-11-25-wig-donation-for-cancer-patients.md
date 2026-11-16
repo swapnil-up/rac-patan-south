@@ -8,7 +8,7 @@ category: "community_service"
 rotaYear: "2024-25"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DCzFk-nSrWW/"
-image: "/uploads/events/2024-11-25-wig-donation-for-cancer-patients.jpg"
+image: "/uploads/events/2024-11-25-wig-donation-for-cancer-patients.webp"
 photos:
   - image: "/uploads/events/2024-11-25-wig-donation-for-cancer-patients-2.jpg"
     caption: ""
@@ -18,7 +18,7 @@ photos:
     caption: ""
   - image: "/uploads/events/2024-11-25-wig-donation-for-cancer-patients-5.jpg"
     caption: ""
-  - image: "/uploads/events/2024-11-25-wig-donation-for-cancer-patients-6.jpg"
+  - image: "/uploads/events/2024-11-25-wig-donation-for-cancer-patients-6.webp"
     caption: ""
 registrationLink: ""
 ---

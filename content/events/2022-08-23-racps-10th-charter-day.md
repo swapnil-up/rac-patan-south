@@ -7,7 +7,7 @@ description: "Rotaract Club of Patan South is 10 years old today! Happy Charter 
 category: "club_service"
 rotaYear: "2022-23"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-08-23-racps-10th-charter-day.jpg"
+image: "/uploads/events/2022-08-23-racps-10th-charter-day.webp"
 registrationLink: ""
 ---
 

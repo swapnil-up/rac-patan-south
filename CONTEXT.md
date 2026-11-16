@@ -51,6 +51,30 @@ All brand colors are in `content/settings/global.json → brand.colors` and inje
 
 Color fields: `primary`, `primaryDark`, `primaryLight`, `accent`, `accentLight`, `accentHover`, `gold`, `goldLight`, `goldHover`, `green`, `greenLight`, `footerBg`, `heroBgStart`, `bodyBg`
 
+### How the content reaches the browser
+The content does not come from an API at runtime. Tina Cloud's public read
+endpoint refuses every origin this site is served from, and no read token is
+available in CI, so a site that fetched from it showed an empty shell.
+
+Instead the content is read out of the local Tina GraphQL server while the
+build runs and written into `src/generated/content.json`:
+
+| File | What it does |
+|---|---|
+| `scripts/snapshot_content.mjs` | Captures 705 GraphQL responses into `src/generated/content.json` (gitignored, rebuilt every time) |
+| `vite-plugin-content-snapshot.ts` | Runs the capture at the start of the build |
+| `src/lib/client.ts` | Serves the snapshot; the dev server talks to the live local GraphQL instead |
+| `vite-plugin-prerender-routes.ts` | Writes an `index.html` for each of the 351 routes, so Pages answers with a 200 |
+| `vite-plugin-github-pages-fallback.ts` | Writes `dist/404.html`, which hands a path the app cannot serve to the app and reloads the root |
+
+`import.meta.env.DEV` cannot be used to tell dev from a production build:
+the Tina CLI runs the build with `NODE_ENV=development`. The switch is
+`VITE_LIVE_CONTENT`, set by the `dev` script only.
+
+Media paths in the content (`/uploads/...`) are rebased under
+`VITE_BASE_PATH` when the snapshot is written — Vite rewrites the asset URLs
+in the source but not the ones inside the content.
+
 ### Routing
 React Router with `BrowserRouter`. Routes resolve to page slugs in TinaCMS (`/services` → loads `content/page/services.mdx`). Hash links (`/#contact`) scroll to section anchors within a page.
 
@@ -68,12 +92,20 @@ React Router with `BrowserRouter`. Routes resolve to page slugs in TinaCMS (`/se
 | `/resources` | Resources |
 | `/*` | 404 page |
 
+On GitHub Pages the site lives under `/rac-patan-south/`. The router is
+given that as its basename, so the paths above stay the same in the code.
+
+## Deployment
+Published on GitHub Pages: <https://swapnil-up.github.io/rac-patan-south/>.
+`.github/workflows/deploy.yml` builds on a push to `main` and deploys `dist/`.
+
 ## For agents
 
 When editing:
 
-1. **Content schemas** live in `tina/collections/`. After changing a schema, rebuild with `pnpm build-local` to regenerate types.
+1. **Content schemas** live in `tina/collections/`. After changing a schema, rebuild with `pnpm build` to regenerate types.
 2. **Components** live in `src/components/`. Props must use generated types from `tina/__generated__/types` — never `Record<string, unknown>` or inline anonymous types.
 3. **CSS** uses CSS Modules. Colors must use `var(--*)` custom properties — never hardcode hex/rgba values.
 4. **Routing** uses React Router (`Link`).
-5. **Build** with `pnpm build-local` — this runs TinaCMS type generation + Vite production build.
+5. **Build** with `pnpm build` — it regenerates the Tina types, captures the content, and writes the static bundle.
+6. **Never import from `tina/__generated__/client`** — import from `src/lib/client.ts` instead, so the site keeps serving the snapshot.

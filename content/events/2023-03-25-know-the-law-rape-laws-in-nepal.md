@@ -8,13 +8,13 @@ description: "Know the Law session: \nTo have knowledge about Rape laws and know
 category: "professional_development"
 rotaYear: "2022-23"
 sourceType: "instagram_post"
-image: "/uploads/events/2023-03-25-know-the-law-rape-laws-in-nepal.jpg"
+image: "/uploads/events/2023-03-25-know-the-law-rape-laws-in-nepal.webp"
 photos:
-  - image: "/uploads/events/2023-03-25-know-the-law-rape-laws-in-nepal-2.jpg"
+  - image: "/uploads/events/2023-03-25-know-the-law-rape-laws-in-nepal-2.webp"
     caption: ""
-  - image: "/uploads/events/2023-03-25-know-the-law-rape-laws-in-nepal-3.jpg"
+  - image: "/uploads/events/2023-03-25-know-the-law-rape-laws-in-nepal-3.webp"
     caption: ""
-  - image: "/uploads/events/2023-03-25-know-the-law-rape-laws-in-nepal-4.jpg"
+  - image: "/uploads/events/2023-03-25-know-the-law-rape-laws-in-nepal-4.webp"
     caption: ""
 registrationLink: ""
 ---

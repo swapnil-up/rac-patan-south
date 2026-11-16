@@ -7,9 +7,9 @@ description: "This event was a collaborative event, including RAC Patan South, i
 category: "professional_development"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
-image: "/uploads/events/2023-09-16-public-speaking-event-ai-in-education.jpg"
+image: "/uploads/events/2023-09-16-public-speaking-event-ai-in-education.webp"
 photos:
-  - image: "/uploads/events/2023-09-16-public-speaking-event-ai-in-education-2.jpg"
+  - image: "/uploads/events/2023-09-16-public-speaking-event-ai-in-education-2.webp"
     caption: ""
 registrationLink: ""
 ---

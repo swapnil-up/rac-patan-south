@@ -8,7 +8,7 @@ description: "Anju Mandal, aged 28 had suffered from Blood Cancer in 2018 and sh
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2021-06-12-know-the-law-session-vi-struggle-for-nijgadh-s-survival.jpg"
+image: "/uploads/events/2021-06-12-know-the-law-session-vi-struggle-for-nijgadh-s-survival.webp"
 registrationLink: ""
 ---
 

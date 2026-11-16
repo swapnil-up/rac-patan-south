@@ -9,7 +9,7 @@ category: "fellowship"
 rotaYear: "2024-25"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DDykGOUy-73/"
-image: "/uploads/events/2024-12-14-late-rtr-santosh-memorial-nationwide-rota-quiz-2024.jpg"
+image: "/uploads/events/2024-12-14-late-rtr-santosh-memorial-nationwide-rota-quiz-2024.webp"
 registrationLink: ""
 ---
 

@@ -10,7 +10,7 @@ rotaYear: "2020-21"
 sourceType: "instagram_post"
 image: "/uploads/events/2021-03-18-book-donation-campaign-for-jaleshwar-library.jpg"
 photos:
-  - image: "/uploads/events/2021-03-18-book-donation-campaign-for-jaleshwar-library-2.jpg"
+  - image: "/uploads/events/2021-03-18-book-donation-campaign-for-jaleshwar-library-2.webp"
     caption: ""
 registrationLink: ""
 ---

@@ -8,9 +8,9 @@ description: "Members of our Rotary, Rotaract, and Interact family, with immense
 category: "installation"
 rotaYear: "2021-22"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-06-25-11th-installation-ceremony.jpg"
+image: "/uploads/events/2022-06-25-11th-installation-ceremony.webp"
 photos:
-  - image: "/uploads/events/2022-06-25-11th-installation-ceremony-2.jpg"
+  - image: "/uploads/events/2022-06-25-11th-installation-ceremony-2.webp"
     caption: ""
 registrationLink: ""
 ---

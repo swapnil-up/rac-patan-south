@@ -8,7 +8,7 @@ description: "Hello everyone, \nMiss Universe Nepal organization led by Nagma Sh
 category: "partnership"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-08-28-trans-women-rights-webinar-with-miss-universe-nepal.jpg"
+image: "/uploads/events/2020-08-28-trans-women-rights-webinar-with-miss-universe-nepal.webp"
 registrationLink: ""
 ---
 

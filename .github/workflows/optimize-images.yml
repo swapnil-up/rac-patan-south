@@ -41,5 +41,7 @@ jobs:
           git config user.name "rac-bot"
           git config user.email "bot@racpatansouth.org"
           git add -A
-          git commit -m "chore: optimize images [skip ci]"
+          # No "[skip ci]" here: the Pages workflow deploys on a push to main,
+          # and the optimised pictures have to reach the site.
+          git commit -m "chore: optimize images"
           git push

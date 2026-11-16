@@ -7,7 +7,7 @@ description: "Here is your chance to learn the basics of law. \"Ignorance of Law
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-07-31-know-the-law-12-day-online-training.jpg"
+image: "/uploads/events/2020-07-31-know-the-law-12-day-online-training.webp"
 registrationLink: ""
 ---
 

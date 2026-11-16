@@ -8,7 +8,7 @@ category: "fellowship"
 rotaYear: "2025-26"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DSME5tyEoNa/"
-image: "/uploads/events/2025-12-13-racps-fantasy-premier-league-2025-26.jpg"
+image: "/uploads/events/2025-12-13-racps-fantasy-premier-league-2025-26.webp"
 registrationLink: ""
 ---
 

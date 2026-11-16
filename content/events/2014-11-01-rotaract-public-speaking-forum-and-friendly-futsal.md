@@ -8,9 +8,9 @@ category: "professional_development"
 rotaYear: "2014-15"
 sourceType: "blogspot_post"
 sourceUrl: "https://racpatansouth.blogspot.com/2014/11/rotaract-public-speaking-forum-and_1.html"
-image: "/uploads/events/2014-11-01-rotaract-public-speaking-forum-and-friendly-futsal.jpg"
+image: "/uploads/events/2014-11-01-rotaract-public-speaking-forum-and-friendly-futsal.webp"
 photos:
-  - image: "/uploads/events/2014-11-01-rotaract-public-speaking-forum-and-friendly-futsal-2.jpg"
+  - image: "/uploads/events/2014-11-01-rotaract-public-speaking-forum-and-friendly-futsal-2.webp"
     caption: ""
 registrationLink: ""
 ---

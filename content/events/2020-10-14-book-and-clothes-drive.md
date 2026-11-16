@@ -8,7 +8,7 @@ description: "Our Little Becomes A Lot For Someone\nRotaract Club of Patan South
 category: "community_service"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-10-14-book-and-clothes-drive.jpg"
+image: "/uploads/events/2020-10-14-book-and-clothes-drive.webp"
 registrationLink: ""
 ---
 

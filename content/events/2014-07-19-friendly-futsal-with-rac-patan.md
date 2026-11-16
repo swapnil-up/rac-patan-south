@@ -9,7 +9,7 @@ category: "international_service"
 rotaYear: "2014-15"
 sourceType: "blogspot_post"
 sourceUrl: "https://racpatansouth.blogspot.com/2014/07/friendly-futsal-with-rac-patan.html"
-image: "/uploads/events/2014-07-19-friendly-futsal-with-rac-patan.jpg"
+image: "/uploads/events/2014-07-19-friendly-futsal-with-rac-patan.webp"
 registrationLink: ""
 ---
 

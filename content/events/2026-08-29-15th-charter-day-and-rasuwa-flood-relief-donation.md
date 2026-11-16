@@ -8,9 +8,9 @@ category: "community_service"
 rotaYear: "2026-27"
 sourceType: "instagram_reel"
 sourceUrl: "https://www.instagram.com/racpatansouth/reel/DcoXejPMuDv/"
-image: "/uploads/events/2026-08-29-15th-charter-day-and-rasuwa-flood-relief-donation.jpg"
+image: "/uploads/events/2026-08-29-15th-charter-day-and-rasuwa-flood-relief-donation.webp"
 photos:
-  - image: "/uploads/events/2026-08-29-15th-charter-day-and-rasuwa-flood-relief-donation-2.jpg"
+  - image: "/uploads/events/2026-08-29-15th-charter-day-and-rasuwa-flood-relief-donation-2.webp"
     caption: ""
 registrationLink: ""
 ---

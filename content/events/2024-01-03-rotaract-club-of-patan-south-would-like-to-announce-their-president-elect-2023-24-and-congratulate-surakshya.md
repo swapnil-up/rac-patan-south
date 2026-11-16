@@ -8,9 +8,9 @@ category: "installation"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/C1oS1l_Lk6Z/"
-image: "/uploads/events/2024-01-03-rotaract-club-of-patan-south-would-like-to-announce-their-president-elect-2023-24-and-congratulate-surakshya.jpg"
+image: "/uploads/events/2024-01-03-rotaract-club-of-patan-south-would-like-to-announce-their-president-elect-2023-24-and-congratulate-surakshya.webp"
 photos:
-  - image: "/uploads/events/2024-01-03-rotaract-club-of-patan-south-would-like-to-announce-their-president-elect-2023-24-and-congratulate-surakshya-2.jpg"
+  - image: "/uploads/events/2024-01-03-rotaract-club-of-patan-south-would-like-to-announce-their-president-elect-2023-24-and-congratulate-surakshya-2.webp"
     caption: ""
 registrationLink: ""
 ---

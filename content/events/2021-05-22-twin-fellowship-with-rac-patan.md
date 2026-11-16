@@ -7,13 +7,13 @@ description: "On May 22, 2021, Rotaract Club of Patan South conducted a Twin Fel
 category: "fellowship"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2021-05-22-twin-fellowship-with-rac-patan.jpg"
+image: "/uploads/events/2021-05-22-twin-fellowship-with-rac-patan.webp"
 photos:
-  - image: "/uploads/events/2021-05-22-twin-fellowship-with-rac-patan-2.jpg"
+  - image: "/uploads/events/2021-05-22-twin-fellowship-with-rac-patan-2.webp"
     caption: ""
-  - image: "/uploads/events/2021-05-22-twin-fellowship-with-rac-patan-3.jpg"
+  - image: "/uploads/events/2021-05-22-twin-fellowship-with-rac-patan-3.webp"
     caption: ""
-  - image: "/uploads/events/2021-05-22-twin-fellowship-with-rac-patan-4.jpg"
+  - image: "/uploads/events/2021-05-22-twin-fellowship-with-rac-patan-4.webp"
     caption: ""
 registrationLink: ""
 ---

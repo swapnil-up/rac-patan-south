@@ -7,7 +7,7 @@ description: "Here are some of the glimpses of our community service projects. -
 category: "professional_development"
 rotaYear: "2019-20"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-06-15-here-are-some-of-the-glimpses-of-our-community-service-projects-reusable-sanitary-pad-workshop.jpg"
+image: "/uploads/events/2020-06-15-here-are-some-of-the-glimpses-of-our-community-service-projects-reusable-sanitary-pad-workshop.webp"
 registrationLink: ""
 ---
 

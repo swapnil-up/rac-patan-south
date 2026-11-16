@@ -7,7 +7,7 @@ description: "Further glimpse of Community Service Projects - Blood Donation Cam
 category: "community_service"
 rotaYear: "2019-20"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-06-15-further-glimpse-of-community-service-projects-blood-donation-camp.jpg"
+image: "/uploads/events/2020-06-15-further-glimpse-of-community-service-projects-blood-donation-camp.webp"
 registrationLink: ""
 ---
 

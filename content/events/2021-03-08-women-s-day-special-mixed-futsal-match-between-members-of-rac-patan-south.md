@@ -7,11 +7,11 @@ description: "Women’s day special; Mixed Futsal match between members of RAC P
 category: "fellowship"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2021-03-08-women-s-day-special-mixed-futsal-match-between-members-of-rac-patan-south.jpg"
+image: "/uploads/events/2021-03-08-women-s-day-special-mixed-futsal-match-between-members-of-rac-patan-south.webp"
 photos:
-  - image: "/uploads/events/2021-03-08-women-s-day-special-mixed-futsal-match-between-members-of-rac-patan-south-2.jpg"
+  - image: "/uploads/events/2021-03-08-women-s-day-special-mixed-futsal-match-between-members-of-rac-patan-south-2.webp"
     caption: ""
-  - image: "/uploads/events/2021-03-08-women-s-day-special-mixed-futsal-match-between-members-of-rac-patan-south-3.jpg"
+  - image: "/uploads/events/2021-03-08-women-s-day-special-mixed-futsal-match-between-members-of-rac-patan-south-3.webp"
     caption: ""
 registrationLink: ""
 ---

@@ -7,7 +7,7 @@ description: "Increasing Digital Literacy\nWe set forth to forth to setup a comp
 category: "community_service"
 rotaYear: "2019-20"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-06-15-increasing-digital-literacy.jpg"
+image: "/uploads/events/2020-06-15-increasing-digital-literacy.webp"
 registrationLink: ""
 ---
 

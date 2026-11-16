@@ -9,9 +9,9 @@ category: "professional_development"
 rotaYear: "2025-26"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DQ3XsQ6EhN-/"
-image: "/uploads/events/2025-11-11-know-the-law-tracing-the-path-of-democracy.jpg"
+image: "/uploads/events/2025-11-11-know-the-law-tracing-the-path-of-democracy.webp"
 photos:
-  - image: "/uploads/events/2025-11-11-know-the-law-tracing-the-path-of-democracy-2.jpg"
+  - image: "/uploads/events/2025-11-11-know-the-law-tracing-the-path-of-democracy-2.webp"
     caption: ""
 registrationLink: ""
 ---

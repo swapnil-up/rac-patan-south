@@ -8,11 +8,11 @@ description: "“You find peace not by rearranging the circumstances of your lif
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-10-08-know-the-inner-calmness-and-peace-webinar.jpg"
+image: "/uploads/events/2020-10-08-know-the-inner-calmness-and-peace-webinar.webp"
 photos:
-  - image: "/uploads/events/2020-10-08-know-the-inner-calmness-and-peace-webinar-2.jpg"
+  - image: "/uploads/events/2020-10-08-know-the-inner-calmness-and-peace-webinar-2.webp"
     caption: ""
-  - image: "/uploads/events/2020-10-08-know-the-inner-calmness-and-peace-webinar-3.jpg"
+  - image: "/uploads/events/2020-10-08-know-the-inner-calmness-and-peace-webinar-3.webp"
     caption: ""
 registrationLink: ""
 ---

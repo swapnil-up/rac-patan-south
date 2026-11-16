@@ -18,6 +18,7 @@ env:
   TINA_PUBLIC_BRANCH: main
   TINA_BASE_PATH: ${{ github.event.repository.name }}
   VITE_BASE_PATH: /${{ github.event.repository.name }}/
+  SITE_ORIGIN: https://${{ github.repository_owner }}.github.io
 
 jobs:
   build:

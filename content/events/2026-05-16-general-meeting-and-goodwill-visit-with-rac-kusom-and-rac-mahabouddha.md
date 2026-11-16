@@ -9,9 +9,9 @@ category: "meeting"
 rotaYear: "2025-26"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DYZlPLniHCd/"
-image: "/uploads/events/2026-05-16-general-meeting-and-goodwill-visit-with-rac-kusom-and-rac-mahabouddha.jpg"
+image: "/uploads/events/2026-05-16-general-meeting-and-goodwill-visit-with-rac-kusom-and-rac-mahabouddha.webp"
 photos:
-  - image: "/uploads/events/2026-05-16-general-meeting-and-goodwill-visit-with-rac-kusom-and-rac-mahabouddha-2.jpg"
+  - image: "/uploads/events/2026-05-16-general-meeting-and-goodwill-visit-with-rac-kusom-and-rac-mahabouddha-2.webp"
     caption: ""
 registrationLink: ""
 ---

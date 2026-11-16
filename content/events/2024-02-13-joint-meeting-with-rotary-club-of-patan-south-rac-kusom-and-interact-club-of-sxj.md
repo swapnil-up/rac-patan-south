@@ -8,9 +8,9 @@ category: "meeting"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/C3R94VLgqPW/"
-image: "/uploads/events/2024-02-13-joint-meeting-with-rotary-club-of-patan-south-rac-kusom-and-interact-club-of-sxj.jpg"
+image: "/uploads/events/2024-02-13-joint-meeting-with-rotary-club-of-patan-south-rac-kusom-and-interact-club-of-sxj.webp"
 photos:
-  - image: "/uploads/events/2024-02-13-joint-meeting-with-rotary-club-of-patan-south-rac-kusom-and-interact-club-of-sxj-2.jpg"
+  - image: "/uploads/events/2024-02-13-joint-meeting-with-rotary-club-of-patan-south-rac-kusom-and-interact-club-of-sxj-2.webp"
     caption: ""
 registrationLink: ""
 ---

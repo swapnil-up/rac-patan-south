@@ -7,7 +7,7 @@ description: "What do we say? It’s our 9th CHARTER DAY! Rotaract Club of Patan
 category: "club_service"
 rotaYear: "2021-22"
 sourceType: "instagram_post"
-image: "/uploads/events/2021-08-23-9th-charter-day.jpg"
+image: "/uploads/events/2021-08-23-9th-charter-day.webp"
 registrationLink: ""
 ---
 

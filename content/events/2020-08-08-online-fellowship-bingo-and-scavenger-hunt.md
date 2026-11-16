@@ -7,7 +7,7 @@ description: "Our bodies might be far this Quarantine but Our hearts will always
 category: "fellowship"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-08-08-online-fellowship-bingo-and-scavenger-hunt.jpg"
+image: "/uploads/events/2020-08-08-online-fellowship-bingo-and-scavenger-hunt.webp"
 registrationLink: ""
 ---
 

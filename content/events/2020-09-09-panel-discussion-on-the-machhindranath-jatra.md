@@ -7,7 +7,7 @@ description: "Rotaract Club of Patan South along with A Step Towards change woul
 category: "fellowship"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-09-09-panel-discussion-on-the-machhindranath-jatra.jpg"
+image: "/uploads/events/2020-09-09-panel-discussion-on-the-machhindranath-jatra.webp"
 registrationLink: ""
 ---
 

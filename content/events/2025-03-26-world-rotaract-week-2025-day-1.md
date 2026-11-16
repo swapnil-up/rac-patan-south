@@ -8,9 +8,9 @@ category: "partnership"
 rotaYear: "2024-25"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DHqulIty13g/"
-image: "/uploads/events/2025-03-26-world-rotaract-week-2025-day-1.jpg"
+image: "/uploads/events/2025-03-26-world-rotaract-week-2025-day-1.webp"
 photos:
-  - image: "/uploads/events/2025-03-26-world-rotaract-week-2025-day-1-2.jpg"
+  - image: "/uploads/events/2025-03-26-world-rotaract-week-2025-day-1-2.webp"
     caption: ""
 registrationLink: ""
 ---

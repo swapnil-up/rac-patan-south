@@ -8,11 +8,11 @@ description: "To address the shortage of blood brought by noble corona virus thr
 category: "community_service"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2021-01-09-blood-donation-camp-2021.jpg"
+image: "/uploads/events/2021-01-09-blood-donation-camp-2021.webp"
 photos:
-  - image: "/uploads/events/2021-01-09-blood-donation-camp-2021-2.jpg"
+  - image: "/uploads/events/2021-01-09-blood-donation-camp-2021-2.webp"
     caption: ""
-  - image: "/uploads/events/2021-01-09-blood-donation-camp-2021-3.jpg"
+  - image: "/uploads/events/2021-01-09-blood-donation-camp-2021-3.webp"
     caption: ""
 registrationLink: ""
 ---

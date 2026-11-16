@@ -7,7 +7,7 @@ description: "RAC Patan South attended Rotary Club of Patan South's 25th Charter
 category: "club_service"
 rotaYear: "2022-23"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-09-03-rotary-club-of-patan-south-25th-charter-day.jpg"
+image: "/uploads/events/2022-09-03-rotary-club-of-patan-south-25th-charter-day.webp"
 registrationLink: ""
 ---
 

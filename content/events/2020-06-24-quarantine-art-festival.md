@@ -7,11 +7,11 @@ description: "Bring in your A game! We're looking for the artist in you this Qua
 category: "fellowship"
 rotaYear: "2019-20"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-06-24-quarantine-art-festival.jpg"
+image: "/uploads/events/2020-06-24-quarantine-art-festival.webp"
 photos:
-  - image: "/uploads/events/2020-06-24-quarantine-art-festival-2.jpg"
+  - image: "/uploads/events/2020-06-24-quarantine-art-festival-2.webp"
     caption: ""
-  - image: "/uploads/events/2020-06-24-quarantine-art-festival-3.jpg"
+  - image: "/uploads/events/2020-06-24-quarantine-art-festival-3.webp"
     caption: ""
 registrationLink: ""
 ---

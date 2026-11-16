@@ -7,7 +7,7 @@ description: "Rotaract Gives Back! This project is to establish a definitive Com
 category: "community_service"
 rotaYear: "2022-23"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-12-23-rotaract-gives-back.jpg"
+image: "/uploads/events/2022-12-23-rotaract-gives-back.webp"
 registrationLink: ""
 ---
 

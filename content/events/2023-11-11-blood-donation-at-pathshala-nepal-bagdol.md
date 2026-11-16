@@ -8,13 +8,13 @@ description: "RACPS along with Rotary family hosted its signature project Blood 
 category: "community_service"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
-image: "/uploads/events/2023-11-11-blood-donation-at-pathshala-nepal-bagdol.jpg"
+image: "/uploads/events/2023-11-11-blood-donation-at-pathshala-nepal-bagdol.webp"
 photos:
-  - image: "/uploads/events/2023-11-11-blood-donation-at-pathshala-nepal-bagdol-2.jpg"
+  - image: "/uploads/events/2023-11-11-blood-donation-at-pathshala-nepal-bagdol-2.webp"
     caption: ""
-  - image: "/uploads/events/2023-11-11-blood-donation-at-pathshala-nepal-bagdol-3.jpg"
+  - image: "/uploads/events/2023-11-11-blood-donation-at-pathshala-nepal-bagdol-3.webp"
     caption: ""
-  - image: "/uploads/events/2023-11-11-blood-donation-at-pathshala-nepal-bagdol-4.jpg"
+  - image: "/uploads/events/2023-11-11-blood-donation-at-pathshala-nepal-bagdol-4.webp"
     caption: ""
 registrationLink: ""
 ---

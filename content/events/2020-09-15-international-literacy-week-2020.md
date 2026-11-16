@@ -7,7 +7,7 @@ description: "Greetings! Rotaract Club of Patan South plans to celebrate Interna
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-09-15-international-literacy-week-2020.jpg"
+image: "/uploads/events/2020-09-15-international-literacy-week-2020.webp"
 registrationLink: ""
 ---
 

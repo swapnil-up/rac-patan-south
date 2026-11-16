@@ -7,7 +7,7 @@ description: "RAC Patan South donated food to the children The Orphan Homes\nWe 
 category: "community_service"
 rotaYear: "2022-23"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-07-23-food-donation-at-the-orphan-homes.jpg"
+image: "/uploads/events/2022-07-23-food-donation-at-the-orphan-homes.webp"
 registrationLink: ""
 ---
 

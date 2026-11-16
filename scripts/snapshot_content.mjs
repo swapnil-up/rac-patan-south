@@ -186,7 +186,24 @@ async function main() {
   }
 
   await fs.mkdir(path.dirname(OUT_FILE), { recursive: true });
-  await fs.writeFile(OUT_FILE, JSON.stringify(rebase(snapshot)), "utf8");
+  await fs.writeFile(
+    OUT_FILE,
+    JSON.stringify({
+      // The text of the queries that can come back empty. A document that is
+      // not in the snapshot — a route that does not exist — still has to be
+      // answered with a well-formed response, the way the Tina client does.
+      queries: {
+        page: documents.PageDocument,
+        event: documents.EventDocument,
+        blog: documents.BlogDocument,
+        gallery: documents.GalleryDocument,
+        eventConnection: documents.EventConnectionDocument,
+        blogConnection: documents.BlogConnectionDocument,
+      },
+      responses: rebase(snapshot),
+    }),
+    "utf8",
+  );
 
   const bytes = (await fs.stat(OUT_FILE)).size;
   console.log(

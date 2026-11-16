@@ -7,13 +7,13 @@ description: "Celebrate the beautiful tapestry of motherhood – where every thr
 category: "community_service"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
-image: "/uploads/events/2023-08-04-breastfeeding-week-celebration.jpg"
+image: "/uploads/events/2023-08-04-breastfeeding-week-celebration.webp"
 photos:
-  - image: "/uploads/events/2023-08-04-breastfeeding-week-celebration-2.jpg"
+  - image: "/uploads/events/2023-08-04-breastfeeding-week-celebration-2.webp"
     caption: ""
-  - image: "/uploads/events/2023-08-04-breastfeeding-week-celebration-3.jpg"
+  - image: "/uploads/events/2023-08-04-breastfeeding-week-celebration-3.webp"
     caption: ""
-  - image: "/uploads/events/2023-08-04-breastfeeding-week-celebration-4.jpg"
+  - image: "/uploads/events/2023-08-04-breastfeeding-week-celebration-4.webp"
     caption: ""
 registrationLink: ""
 ---

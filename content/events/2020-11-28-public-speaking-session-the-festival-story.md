@@ -8,7 +8,7 @@ description: "Greetings Rotaractors! Rotaract Club of Patan South is hosting the
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-11-28-public-speaking-session-the-festival-story.jpg"
+image: "/uploads/events/2020-11-28-public-speaking-session-the-festival-story.webp"
 registrationLink: ""
 ---
 

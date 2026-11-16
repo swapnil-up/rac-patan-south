@@ -8,7 +8,7 @@ category: "community_service"
 rotaYear: "2025-26"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DYMY7PcCM8_/"
-image: "/uploads/events/2026-03-21-mind-and-me-phase-i.jpg"
+image: "/uploads/events/2026-03-21-mind-and-me-phase-i.webp"
 registrationLink: ""
 ---
 

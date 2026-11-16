@@ -4,7 +4,7 @@ slug: "2014-08-02-installation-ceremony"
 date: "2014-08-02T17:01:00.000+05:30"
 author: "RAC Patan South Archive"
 excerpt: "2nd Installation Ceremony of Rotaract Club of Patan South was held on 2nd August, 2014 at Degaa Resto Longe. The event was marked by handover of the Charter Certificate, Gong..."
-coverImage: "/uploads/blog/2014-08-02-installation-ceremony-1.jpg"
+coverImage: "/uploads/blog/2014-08-02-installation-ceremony-1.webp"
 ---
 
 2nd Installation Ceremony of Rotaract Club of Patan South was held on ***2nd August, 2014*** at Degaa Resto Longe. The event was marked by handover of the Charter Certificate, Gong, Gavel and President's Collar by *outgoing President Rtr. Sneha Shakya* to *incoming President Rtr. Sambid Ghimire.*

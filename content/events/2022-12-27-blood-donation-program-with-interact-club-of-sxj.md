@@ -7,7 +7,7 @@ description: "Donating blood can help save many lives. There are still many case
 category: "community_service"
 rotaYear: "2022-23"
 sourceType: "instagram_archived"
-image: "/uploads/events/2022-12-27-blood-donation-program-with-interact-club-of-sxj.jpg"
+image: "/uploads/events/2022-12-27-blood-donation-program-with-interact-club-of-sxj.webp"
 registrationLink: ""
 ---
 

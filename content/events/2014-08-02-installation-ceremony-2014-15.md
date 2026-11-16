@@ -9,7 +9,7 @@ category: "installation"
 rotaYear: "2014-15"
 sourceType: "blogspot_post"
 sourceUrl: "https://racpatansouth.blogspot.com/2014/08/installation-ceremony.html"
-image: "/uploads/events/2014-08-02-installation-ceremony-2014-15.jpg"
+image: "/uploads/events/2014-08-02-installation-ceremony-2014-15.webp"
 registrationLink: ""
 ---
 

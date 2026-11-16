@@ -8,7 +8,7 @@ description: "Rotaract club of Patan South along with RAC Kathmandu Metropolis a
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-12-19-know-the-law-right-to-safe-abortion-in-nepal.jpg"
+image: "/uploads/events/2020-12-19-know-the-law-right-to-safe-abortion-in-nepal.webp"
 registrationLink: ""
 ---
 

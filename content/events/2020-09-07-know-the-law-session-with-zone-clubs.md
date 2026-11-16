@@ -7,7 +7,7 @@ description: "Rotaract club of Patan South along with RAC Kathmandu Metropolis a
 category: "partnership"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-09-07-know-the-law-session-with-zone-clubs.jpg"
+image: "/uploads/events/2020-09-07-know-the-law-session-with-zone-clubs.webp"
 registrationLink: ""
 ---
 

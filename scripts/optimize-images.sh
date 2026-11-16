@@ -141,8 +141,17 @@ convert_image() {
 
   # The content refers to the file by its path under public/ — "/uploads/blog/x.jpg",
   # with the subdirectory — so the whole path has to be matched, not just the name.
+  # The path is matched without its leading slash, which covers both "/uploads/..."
+  # and "uploads/..." in one go.
   local rel="${file#"$PUBLIC_DIR"/}"
-  update_references "/$rel" "/${rel%.*}.webp"
+  update_references "$rel" "${rel%.*}.webp"
+
+  # Only drop the original once nothing points at it any more. If a reference
+  # was missed, the picture stays and the page keeps working.
+  if still_referenced "$rel"; then
+    echo "    kept the original: something still points at it"
+    return 0
+  fi
 
   rm "$file"
 }
@@ -151,6 +160,13 @@ convert_image() {
 # and "|" is the delimiter.
 escape_sed() {
   printf '%s' "$1" | sed -e 's/[&|]/\\&/g'
+}
+
+# Is the path still named in any content file?
+still_referenced() {
+  local needle="$1"
+  find "$CONTENT_DIR" -type f \( -name "*.md" -o -name "*.mdx" -o -name "*.json" \) \
+    -exec grep -lF -- "$needle" {} \; 2>/dev/null | grep -q .
 }
 
 update_references() {
@@ -169,7 +185,6 @@ update_references() {
     echo "    Updated: $cf"
   done
 }
-
 echo "Scanning $UPLOADS_DIR for non-WebP images..."
 echo ""
 

@@ -7,7 +7,7 @@ description: "RACPS is back with our annual celebration for book reading! We enc
 category: "fellowship"
 rotaYear: "2021-22"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-04-23-annual-book-reading-campaign-2022.jpg"
+image: "/uploads/events/2022-04-23-annual-book-reading-campaign-2022.webp"
 registrationLink: ""
 ---
 

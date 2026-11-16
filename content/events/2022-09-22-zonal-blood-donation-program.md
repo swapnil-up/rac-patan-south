@@ -7,7 +7,7 @@ description: "RAC Patan South is jointly organising a Zonal Blood Donation progr
 category: "community_service"
 rotaYear: "2022-23"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-09-22-zonal-blood-donation-program.jpg"
+image: "/uploads/events/2022-09-22-zonal-blood-donation-program.webp"
 registrationLink: ""
 ---
 

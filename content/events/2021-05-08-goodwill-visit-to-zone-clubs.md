@@ -7,9 +7,9 @@ description: "Glimpse of RAC Patan south goodwill Visit to RAC Chandragiri, RAC 
 category: "international_service"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2021-05-08-goodwill-visit-to-zone-clubs.jpg"
+image: "/uploads/events/2021-05-08-goodwill-visit-to-zone-clubs.webp"
 photos:
-  - image: "/uploads/events/2021-05-08-goodwill-visit-to-zone-clubs-2.jpg"
+  - image: "/uploads/events/2021-05-08-goodwill-visit-to-zone-clubs-2.webp"
     caption: ""
 registrationLink: ""
 ---

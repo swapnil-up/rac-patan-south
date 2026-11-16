@@ -8,9 +8,9 @@ description: "With great excitement, we announce that Rotaract Club of Patan Sou
 category: "community_service"
 rotaYear: "2022-23"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-07-22-blood-donation-program-with-king-s-college.jpg"
+image: "/uploads/events/2022-07-22-blood-donation-program-with-king-s-college.webp"
 photos:
-  - image: "/uploads/events/2022-07-22-blood-donation-program-with-king-s-college-2.jpg"
+  - image: "/uploads/events/2022-07-22-blood-donation-program-with-king-s-college-2.webp"
     caption: ""
 registrationLink: ""
 ---

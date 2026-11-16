@@ -8,13 +8,13 @@ description: "URGENT HELP NEEDED! To aid the current devastating scenario at Sin
 category: "fundraiser"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2021-06-18-sindhupalchok-flood-relief-fundraiser.jpg"
+image: "/uploads/events/2021-06-18-sindhupalchok-flood-relief-fundraiser.webp"
 photos:
   - image: "/uploads/events/2021-06-18-sindhupalchok-flood-relief-fundraiser-2.jpg"
     caption: ""
   - image: "/uploads/events/2021-06-18-sindhupalchok-flood-relief-fundraiser-3.jpg"
     caption: ""
-  - image: "/uploads/events/2021-06-18-sindhupalchok-flood-relief-fundraiser-4.jpg"
+  - image: "/uploads/events/2021-06-18-sindhupalchok-flood-relief-fundraiser-4.webp"
     caption: ""
 registrationLink: ""
 ---

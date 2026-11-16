@@ -8,7 +8,7 @@ category: "meeting"
 rotaYear: "2023-24"
 sourceType: "instagram_reel"
 sourceUrl: "https://www.instagram.com/racpatansouth/reel/C8mG9qhghZZ/"
-image: "/uploads/events/2024-06-24-adjourned-general-meeting-ry-2023-24.jpg"
+image: "/uploads/events/2024-06-24-adjourned-general-meeting-ry-2023-24.webp"
 registrationLink: ""
 ---
 

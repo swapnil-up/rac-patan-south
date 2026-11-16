@@ -11,7 +11,7 @@ image: "/uploads/events/2023-08-09-racps-fantasy-league-2023-24.jpg"
 photos:
   - image: "/uploads/events/2023-08-09-racps-fantasy-league-2023-24-2.jpg"
     caption: ""
-  - image: "/uploads/events/2023-08-09-racps-fantasy-league-2023-24-3.jpg"
+  - image: "/uploads/events/2023-08-09-racps-fantasy-league-2023-24-3.webp"
     caption: ""
 registrationLink: ""
 ---

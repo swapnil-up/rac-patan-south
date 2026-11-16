@@ -7,9 +7,9 @@ description: "Deusi- Bhailo Fundraiser. We, Rotaract Club of patan south along w
 category: "fundraiser"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
-image: "/uploads/events/2023-11-08-deusi-bhailo-fundraiser.jpg"
+image: "/uploads/events/2023-11-08-deusi-bhailo-fundraiser.webp"
 photos:
-  - image: "/uploads/events/2023-11-08-deusi-bhailo-fundraiser-2.jpg"
+  - image: "/uploads/events/2023-11-08-deusi-bhailo-fundraiser-2.webp"
     caption: ""
   - image: "/uploads/events/2023-11-08-deusi-bhailo-fundraiser-3.jpg"
     caption: ""

@@ -8,7 +8,7 @@ description: "Some glimpses of our Professional Service Projects: - Public Speak
 category: "professional_development"
 rotaYear: "2019-20"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-06-18-some-glimpses-of-our-professional-service-projects-public-speaking.jpg"
+image: "/uploads/events/2020-06-18-some-glimpses-of-our-professional-service-projects-public-speaking.webp"
 registrationLink: ""
 ---
 

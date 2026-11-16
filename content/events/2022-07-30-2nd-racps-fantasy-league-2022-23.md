@@ -7,11 +7,11 @@ description: "2nd RACPS Fantasy League 2022-23!! Classic League Code: cw50w2 2nd
 category: "fellowship"
 rotaYear: "2022-23"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-07-30-2nd-racps-fantasy-league-2022-23.jpg"
+image: "/uploads/events/2022-07-30-2nd-racps-fantasy-league-2022-23.webp"
 photos:
-  - image: "/uploads/events/2022-07-30-2nd-racps-fantasy-league-2022-23-2.jpg"
+  - image: "/uploads/events/2022-07-30-2nd-racps-fantasy-league-2022-23-2.webp"
     caption: ""
-  - image: "/uploads/events/2022-07-30-2nd-racps-fantasy-league-2022-23-3.jpg"
+  - image: "/uploads/events/2022-07-30-2nd-racps-fantasy-league-2022-23-3.webp"
     caption: ""
 registrationLink: ""
 ---

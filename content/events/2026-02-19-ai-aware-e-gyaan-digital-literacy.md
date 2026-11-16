@@ -9,7 +9,7 @@ category: "professional_development"
 rotaYear: "2025-26"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DUsh7R0iM4-/"
-image: "/uploads/events/2026-02-19-ai-aware-e-gyaan-digital-literacy.jpg"
+image: "/uploads/events/2026-02-19-ai-aware-e-gyaan-digital-literacy.webp"
 registrationLink: ""
 ---
 

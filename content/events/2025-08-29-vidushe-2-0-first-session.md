@@ -8,11 +8,11 @@ category: "professional_development"
 rotaYear: "2025-26"
 sourceType: "instagram_post"
 sourceUrl: "https://www.instagram.com/racpatansouth/p/DQ3nEM6kp8u/"
-image: "/uploads/events/2025-08-29-vidushe-2-0-first-session.jpg"
+image: "/uploads/events/2025-08-29-vidushe-2-0-first-session.webp"
 photos:
   - image: "/uploads/events/2025-08-29-vidushe-2-0-first-session-2.jpg"
     caption: ""
-  - image: "/uploads/events/2025-08-29-vidushe-2-0-first-session-3.jpg"
+  - image: "/uploads/events/2025-08-29-vidushe-2-0-first-session-3.webp"
     caption: ""
 registrationLink: ""
 ---

@@ -7,7 +7,7 @@ description: "Our esteemed member, Rtr. Pooja Wagle, made a commendable contribu
 category: "club_service"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
-image: "/uploads/events/2023-09-17-rtr-pooja-wagle-at-rac-jawalakhel-manjushree-inaugural-event.jpg"
+image: "/uploads/events/2023-09-17-rtr-pooja-wagle-at-rac-jawalakhel-manjushree-inaugural-event.webp"
 registrationLink: ""
 ---
 

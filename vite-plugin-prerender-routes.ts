@@ -47,6 +47,10 @@ interface SnapshotEntry {
   };
 }
 
+interface Snapshot {
+  responses: Record<string, SnapshotEntry>;
+}
+
 /** Every route the site can show, as a path without a trailing slash. */
 function collectRoutes(snapshot: Record<string, SnapshotEntry>): string[] {
   const routes = new Set<string>(["/"]);
@@ -84,7 +88,7 @@ export function prerenderRoutes() {
         return;
       }
 
-      let snapshot: Record<string, SnapshotEntry>;
+      let snapshot: Snapshot;
       try {
         snapshot = JSON.parse(await fs.readFile(SNAPSHOT_FILE, "utf8"));
       } catch {
@@ -95,7 +99,7 @@ export function prerenderRoutes() {
         return;
       }
 
-      const routes = collectRoutes(snapshot);
+      const routes = collectRoutes(snapshot.responses);
       let written = 0;
 
       for (const route of routes) {

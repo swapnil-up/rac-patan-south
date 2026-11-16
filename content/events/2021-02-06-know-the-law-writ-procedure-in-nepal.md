@@ -8,7 +8,7 @@ description: "Rotaract club of Patan South along with RAC Kathmandu Metropolis a
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2021-02-06-know-the-law-writ-procedure-in-nepal.jpg"
+image: "/uploads/events/2021-02-06-know-the-law-writ-procedure-in-nepal.webp"
 registrationLink: ""
 ---
 

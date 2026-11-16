@@ -7,13 +7,13 @@ description: "In observance of Equal Pay Day, Professional Development Committee
 category: "professional_development"
 rotaYear: "2023-24"
 sourceType: "instagram_post"
-image: "/uploads/events/2023-09-27-equal-pay-day-know-the-law-session-and-symposium.jpg"
+image: "/uploads/events/2023-09-27-equal-pay-day-know-the-law-session-and-symposium.webp"
 photos:
-  - image: "/uploads/events/2023-09-27-equal-pay-day-know-the-law-session-and-symposium-2.jpg"
+  - image: "/uploads/events/2023-09-27-equal-pay-day-know-the-law-session-and-symposium-2.webp"
     caption: ""
-  - image: "/uploads/events/2023-09-27-equal-pay-day-know-the-law-session-and-symposium-3.jpg"
+  - image: "/uploads/events/2023-09-27-equal-pay-day-know-the-law-session-and-symposium-3.webp"
     caption: ""
-  - image: "/uploads/events/2023-09-27-equal-pay-day-know-the-law-session-and-symposium-4.jpg"
+  - image: "/uploads/events/2023-09-27-equal-pay-day-know-the-law-session-and-symposium-4.webp"
     caption: ""
 registrationLink: ""
 ---

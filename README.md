@@ -72,16 +72,42 @@ Hash links (`/#contact`) scroll to a section anchor within the current page afte
 ### Building
 
 ```bash
-pnpm build-local    # Build against local content (no Tina Cloud needed)
-pnpm build          # Build with Tina Cloud (set .env vars first)
+pnpm build          # Build the site
+pnpm preview        # Serve the build on http://localhost:4173
 ```
+
+The build produces a plain static bundle — `dist/` can be hosted anywhere.
+
+The content is read out of the local Tina GraphQL server while the build runs
+and written into `src/generated/content.json`, which the site then serves.
+That file is regenerated on every build and is not committed. The dev server
+does the same thing against the live local GraphQL, so an edit in the admin
+shows up on the page straight away.
+
+The published site therefore makes no request to Tina Cloud. Tina Cloud's
+public read endpoint refuses every origin this site has been served from
+(`access-control-allow-origin: not-allowed`), and no read token is available
+in CI — so the content has to travel with the build.
 
 ## Deploying
 
-Client-side SPA — `pnpm build` produces `dist/index.html` + assets. Requires a rewrite/fallback to `index.html` for client-side routing:
+The site is published on GitHub Pages:
+**<https://swapnil-up.github.io/rac-patan-south/>**
 
-- **Vercel** — `vercel.json` (included) handles it automatically
-- **GitHub Pages** — see `.github/workflows/deploy.yml`
+`.github/workflows/deploy.yml` builds it on every push to `main` and
+deploys the `dist/` folder. Two details make it work there:
+
+- **`VITE_BASE_PATH`** — Pages serves the site under `/rac-patan-south/`,
+  not `/`. The build puts the assets and the media paths under that prefix.
+- **`vite-plugin-github-pages-fallback.ts`** — Pages has no rewrite rules,
+  so a deep link has no file behind it. The fallback hands the requested
+  path to the app and reloads the root, where the path is restored before
+  React starts. `vite-plugin-prerender-routes.ts` gives every route an
+  `index.html` of its own, so the links the site is known by answer with a
+  200 rather than the fallback's 404.
+
+Vercel is also set up (`vercel.json` handles the rewrite), but GitHub Pages
+is where the site is live.
 
 ## Pulling Template Updates
 

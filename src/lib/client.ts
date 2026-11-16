@@ -20,18 +20,23 @@ interface Captured {
   variables: Record<string, unknown>;
 }
 
+interface Snapshot {
+  queries: Record<string, string>;
+  responses: Record<string, Captured>;
+}
+
 // The snapshot is a separate chunk rather than part of the main bundle: the
 // content is several megabytes, and the app can start without it.
 const contentFiles = import.meta.glob("../generated/content.json");
 const loadContent = contentFiles["../generated/content.json"];
 
-let snapshot: Promise<Record<string, Captured>> | null = null;
+let snapshot: Promise<Snapshot> | null = null;
 
-function getSnapshot(): Promise<Record<string, Captured>> {
+function getSnapshot(): Promise<Snapshot> {
   if (!snapshot) {
     snapshot = loadContent
-      ? loadContent().then((module) => (module.default ?? module) as Record<string, Captured>)
-      : Promise.resolve({});
+      ? loadContent().then((module) => (module.default ?? module) as Snapshot)
+      : Promise.resolve({ queries: {}, responses: {} });
   }
   return snapshot;
 }
@@ -52,16 +57,54 @@ function keyFor(name: string, variables: Record<string, unknown> = {}): string {
   return `${name}|relativePath=${variables.relativePath}`;
 }
 
+/**
+ * What a query answers when the document it asks for does not exist.
+ *
+ * The Tina client answers with empty data rather than an error, and the app
+ * has its own handling for that: a page falls back to the 404 page, an
+ * event or a post says so. Throwing instead would turn every missing route
+ * into an error message.
+ */
+const EMPTY: Record<string, unknown> = {
+  page: { page: null },
+  event: { event: null },
+  blog: { blog: null },
+  gallery: { gallery: null },
+  eventConnection: {
+    eventConnection: {
+      edges: [],
+      totalCount: 0,
+      pageInfo: { hasNextPage: false, hasPreviousPage: false },
+    },
+  },
+  blogConnection: {
+    blogConnection: {
+      edges: [],
+      totalCount: 0,
+      pageInfo: { hasNextPage: false, hasPreviousPage: false },
+    },
+  },
+};
+
 async function lookup(name: string, variables: Record<string, unknown> = {}) {
-  const captured = await getSnapshot();
-  const hit = captured[keyFor(name, variables)];
-  if (!hit) {
-    throw new Error(
-      `No content snapshot for "${name}" (${JSON.stringify(variables)}). ` +
-        "The snapshot is out of date — rebuild the site.",
-    );
+  const { queries, responses } = await getSnapshot();
+  const key = keyFor(name, variables);
+  const hit = responses[key];
+  if (hit) return hit;
+
+  // A single document, or one item of a collection, may simply not exist.
+  const byItem = key.includes("|slug=") || !key.includes("|all");
+  const empty = EMPTY[name];
+  if (byItem && empty !== undefined) {
+    return { data: empty, query: queries[name] ?? "", variables };
   }
-  return hit;
+
+  // A whole collection, or the settings, are always there. If they are not,
+  // the snapshot is out of date and the site would quietly show nothing.
+  throw new Error(
+    `No content snapshot for "${name}" (${JSON.stringify(variables)}). ` +
+      "The snapshot is out of date — rebuild the site.",
+  );
 }
 
 const staticQueries = {

@@ -7,7 +7,7 @@ description: "RACPS ran an election awareness campaign to encourage informed and
 category: "community_service"
 rotaYear: "2021-22"
 sourceType: "instagram_post"
-image: "/uploads/events/2022-05-09-election-awareness.jpg"
+image: "/uploads/events/2022-05-09-election-awareness.webp"
 registrationLink: ""
 ---
 

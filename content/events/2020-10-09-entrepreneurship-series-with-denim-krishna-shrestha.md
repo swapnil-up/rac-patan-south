@@ -8,9 +8,9 @@ description: "We will be having our 2nd session for the series of Entrepreneursh
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-10-09-entrepreneurship-series-with-denim-krishna-shrestha.jpg"
+image: "/uploads/events/2020-10-09-entrepreneurship-series-with-denim-krishna-shrestha.webp"
 photos:
-  - image: "/uploads/events/2020-10-09-entrepreneurship-series-with-denim-krishna-shrestha-2.jpg"
+  - image: "/uploads/events/2020-10-09-entrepreneurship-series-with-denim-krishna-shrestha-2.webp"
     caption: ""
 registrationLink: ""
 ---

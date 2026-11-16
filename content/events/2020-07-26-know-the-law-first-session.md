@@ -8,7 +8,7 @@ description: "We successfully executed our first 'Know The Law' Session after 1 
 category: "professional_development"
 rotaYear: "2020-21"
 sourceType: "instagram_post"
-image: "/uploads/events/2020-07-26-know-the-law-first-session.jpg"
+image: "/uploads/events/2020-07-26-know-the-law-first-session.webp"
 registrationLink: ""
 ---
 

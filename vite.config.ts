@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import { contentSnapshot } from "./vite-plugin-content-snapshot";
 import { githubPagesFallback } from "./vite-plugin-github-pages-fallback";
 import { prerenderRoutes } from "./vite-plugin-prerender-routes";
+import { sitemap } from "./vite-plugin-sitemap";
 
 export default defineConfig({
   base: process.env.VITE_BASE_PATH || "/",
@@ -11,5 +12,6 @@ export default defineConfig({
     contentSnapshot(),
     githubPagesFallback(),
     prerenderRoutes(),
+    sitemap(),
   ],
 });
