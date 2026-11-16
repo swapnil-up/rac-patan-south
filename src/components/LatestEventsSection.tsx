@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import client from "../../tina/__generated__/client";
+import client from "../lib/client";
 import type { Event, PageSectionsLatestEvents } from "../../tina/__generated__/types";
 import SectionShell from "./SectionShell";
 import styles from "./LatestEventsSection.module.css";

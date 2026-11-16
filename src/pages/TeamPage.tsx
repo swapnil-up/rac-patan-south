@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import client from "../../tina/__generated__/client";
+import client from "../lib/client";
 import type { TeamTerm, TeamTermBoard } from "../../tina/__generated__/types";
 
 type Term = Omit<TeamTerm, "_values" | "_sys">;

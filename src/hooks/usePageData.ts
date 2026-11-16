@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import client from "../../tina/__generated__/client";
+import client from "../lib/client";
 
 import type {
   PageQuery,

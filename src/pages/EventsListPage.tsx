@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-import client from "../../tina/__generated__/client";
+import client from "../lib/client";
 import type { Event } from "../../tina/__generated__/types";
 import { useSettingsContext } from "../hooks/SettingsContext";
 import ThemeStyle from "../components/ThemeStyle";

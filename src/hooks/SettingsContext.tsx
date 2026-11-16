@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
-import client from "../../tina/__generated__/client";
+import client from "../lib/client";
 import type { SettingsPartsFragment } from "../../tina/__generated__/types";
 
 interface SettingsContextValue {

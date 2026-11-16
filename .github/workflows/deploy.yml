@@ -15,7 +15,6 @@ concurrency:
 
 env:
   TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-  TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
   TINA_PUBLIC_BRANCH: main
   TINA_BASE_PATH: ${{ github.event.repository.name }}
   VITE_BASE_PATH: /${{ github.event.repository.name }}/
@@ -36,6 +35,9 @@ jobs:
           cache: pnpm
 
       - run: pnpm install
+      # The site is built as a static bundle: the content is read out of the
+      # local Tina GraphQL server during the build and baked into the pages,
+      # so the published site needs no content API and no token.
       - run: pnpm build
 
       - uses: actions/upload-pages-artifact@v3

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { tinaField } from "tinacms/dist/react";
 import type { PageSectionsSponsorGrid, Sponsor } from "../../tina/__generated__/types";
-import client from "../../tina/__generated__/client";
+import client from "../lib/client";
 import SectionShell from "./SectionShell";
 import styles from "./SponsorGridSection.module.css";
 
