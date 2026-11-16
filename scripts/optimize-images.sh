@@ -15,6 +15,7 @@ set -euo pipefail
 QUALITY=80
 MAX_WIDTH=1920
 MIN_SIZE=51200
+PUBLIC_DIR="public"
 UPLOADS_DIR="public/uploads"
 CONTENT_DIR="content"
 DRY_RUN=false
@@ -103,19 +104,24 @@ convert_image() {
     return 0
   fi
 
+  # -nostdin matters: ffmpeg reads stdin by default, and stdin here is the
+  # `find -print0` list of files still to convert. Without it ffmpeg swallows
+  # the next path and the run dies partway through.
   if [[ "$ext" =~ ^[Gg][Ii][Ff]$ ]]; then
-    ffmpeg -y -i "$file" -c:v libwebp_anim -quality "$QUALITY" \
-      -compression_level 6 "$output" 2>/dev/null
+    ffmpeg -nostdin -y -i "$file" -c:v libwebp_anim -quality "$QUALITY" \
+      -compression_level 6 "$output" 2>/dev/null \
+      || ffmpeg -nostdin -y -i "$file" -c:v libwebp -quality "$QUALITY" \
+        -compression_level 6 "$output" 2>/dev/null
   else
-    ffmpeg -y -i "$file" -c:v libwebp -quality "$QUALITY" \
+    ffmpeg -nostdin -y -i "$file" -c:v libwebp -quality "$QUALITY" \
       -compression_level 6 \
       -vf "scale='min($MAX_WIDTH,iw)':min'($MAX_WIDTH,ih)':force_original_aspect_ratio=decrease" \
       "$output" 2>/dev/null
   fi
 
   if [ ! -f "$output" ]; then
-    echo "    FAILED: $base"
-    return 1
+    echo "    FAILED (left as-is): $base"
+    return 0
   fi
 
   local new_size
@@ -133,24 +139,34 @@ convert_image() {
   local saved=$((orig_size - new_size))
   echo "    -> $name.webp ($(human "$new_size"), saved $(human "$saved"))"
 
-  update_references "$base" "$name.webp"
+  # The content refers to the file by its path under public/ — "/uploads/blog/x.jpg",
+  # with the subdirectory — so the whole path has to be matched, not just the name.
+  local rel="${file#"$PUBLIC_DIR"/}"
+  update_references "/$rel" "/${rel%.*}.webp"
 
   rm "$file"
 }
 
+# Escape a path for use in a sed replacement: "&" would mean "the whole match"
+# and "|" is the delimiter.
+escape_sed() {
+  printf '%s' "$1" | sed -e 's/[&|]/\\&/g'
+}
+
 update_references() {
-  local old=$1 new=$2
+  local old_path new_path
+  old_path=$(escape_sed "$1")
+  new_path=$(escape_sed "$2")
 
-  find "$CONTENT_DIR" -type f \( -name "*.md" -o -name "*.mdx" -o -name "*.json" \) \
-    -exec grep -l "/uploads/$old" {} \; 2>/dev/null | while read -r cf; do
-    sed -i "s|/uploads/$old|/uploads/$new|g" "$cf"
+  local -a files=()
+  while IFS= read -r cf; do
+    files+=("$cf")
+  done < <(find "$CONTENT_DIR" -type f \( -name "*.md" -o -name "*.mdx" -o -name "*.json" \) \
+    -exec grep -lF -- "$1" {} \; 2>/dev/null || true)
+
+  for cf in "${files[@]}"; do
+    sed -i "s|$old_path|$new_path|g" "$cf"
     echo "    Updated: $cf"
-  done
-
-  find "$CONTENT_DIR" -type f \( -name "*.md" -o -name "*.mdx" -o -name "*.json" \) \
-    -exec grep -l "uploads/$old" {} \; 2>/dev/null | while read -r cf; do
-    sed -i "s|uploads/$old|uploads/$new|g" "$cf"
-    echo "    Updated (no-slash): $cf"
   done
 }
 
@@ -158,7 +174,9 @@ echo "Scanning $UPLOADS_DIR for non-WebP images..."
 echo ""
 
 while IFS= read -r -d '' file; do
-  convert_image "$file"
+  # A file that cannot be converted is skipped, not fatal: one bad upload
+  # should not stop the run.
+  convert_image "$file" || echo "    skipped: $file"
 done < <(find "$UPLOADS_DIR" -type f \( \
   -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o \
   -iname "*.gif" -o -iname "*.bmp" -o -iname "*.tiff" -o -iname "*.tif" \
